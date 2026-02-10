@@ -1191,7 +1191,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimplePlayerController
   moveSpeed: 10
+  sprintMultiplier: 2
+  sneakMultiplier: 0.5
+  crouchHeight: 1
   mouseSensitivity: 2
+  jumpForce: 5
+  lookSensitivity: 2
+  maxLookAngle: 80
+  minLookAngle: -80
 --- !u!54 &1703425515
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1372,13 +1379,19 @@ MonoBehaviour:
   - {fileID: 1747604507}
   waitTime: 2
   moveSpeed: 3.5
-  viewRadius: 10.55
-  viewAngle: 90
+  viewRadius: 15
+  immediateChaseRadius: 5
+  viewAngle: 115
   obstacleMask:
     serializedVersion: 2
     m_Bits: 1
-  chaseSpeed: 6
-  giveUpDistance: 15
+  suspectToChaseLapse: 0.3
+  suspectSpeed: 3
+  investigateTime: 4
+  chaseSpeed: 8
+  giveUpDistance: 25
+  attackDistance: 3
+  attackInterval: 1.5
   showDebugGizmos: 1
 --- !u!136 &1883853194
 CapsuleCollider:
