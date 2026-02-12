@@ -48,7 +48,7 @@ public class SimplePlayerController : MonoBehaviour
     private float bobTimer = 0f;
     private float defaultCamY;
 
-
+    public PlayerInventory inventory; // Reference to the player's inventory
 
     private Camera playerCam;
     private Rigidbody rb;
@@ -64,6 +64,7 @@ public class SimplePlayerController : MonoBehaviour
         originalHeight = playerCollider.height;
         defaultCamY = playerCam.transform.localPosition.y;
 
+        inventory = GetComponent<PlayerInventory>();
 
         // Lock cursor to the center of the screen
         Cursor.lockState = CursorLockMode.Locked;
