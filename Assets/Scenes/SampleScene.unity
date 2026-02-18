@@ -5264,81 +5264,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8297480223549904409, guid: 0cdc1bcd961b05f439c6f3546ec717df, type: 3}
   m_PrefabInstance: {fileID: 2091420494}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &534346001
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 534346002}
-  - component: {fileID: 534346004}
-  - component: {fileID: 534346003}
-  m_Layer: 5
-  m_Name: SystemStability
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &534346002
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534346001}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1757716492}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 34, y: -79.60913}
-  m_SizeDelta: {x: 500.1133, y: 281.3161}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &534346003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534346001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af55cdee2ee0d9a479d00b4f51046362, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &534346004
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534346001}
-  m_CullTransparentMesh: 1
 --- !u!1 &540788476
 GameObject:
   m_ObjectHideFlags: 0
@@ -14032,7 +13957,6 @@ RectTransform:
   - {fileID: 1678630666}
   - {fileID: 744499659}
   - {fileID: 2058241772}
-  - {fileID: 534346002}
   - {fileID: 1006920466}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17424,16 +17348,52 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
+      propertyPath: healthImage
+      value: 
+      objectReference: {fileID: 2058241773}
+    - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
       propertyPath: crouchHeight
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
+      propertyPath: healthSprites.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
+      propertyPath: 'healthSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 1339614cb6d2f9046984cdb01944b666, type: 3}
+    - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
+      propertyPath: 'healthSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: dd9207daa422bdd41b39cb4bb941d70e, type: 3}
+    - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
+      propertyPath: 'healthSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: e76803e65554d174b9a551b25f0e0584, type: 3}
+    - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
+      propertyPath: 'healthSprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: 21300000, guid: c6cb14b92371b724d91d221a71b9118d, type: 3}
+    - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
+      propertyPath: 'healthSprites.Array.data[4]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 6325f9de42c235443a193f9f2fdae7a9, type: 3}
+    - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
+      propertyPath: 'healthSprites.Array.data[5]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e6a4e93c277e3f40980d6b02c77092f, type: 3}
+    - target: {fileID: 4456669741881958152, guid: 5fd603238750e4845a95dfd550421599, type: 3}
+      propertyPath: 'healthSprites.Array.data[6]'
+      value: 
+      objectReference: {fileID: 21300000, guid: af55cdee2ee0d9a479d00b4f51046362, type: 3}
     - target: {fileID: 4900941342300042267, guid: 5fd603238750e4845a95dfd550421599, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4900941342300042267, guid: 5fd603238750e4845a95dfd550421599, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6123981122144745443, guid: 5fd603238750e4845a95dfd550421599, type: 3}
       propertyPath: m_LocalPosition.x
