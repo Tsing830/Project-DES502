@@ -1,11 +1,16 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SimplePlayerController : MonoBehaviour
 {
     [Header("Stats")]
     public int curHealth = 100;          // Player health
     public int maxHealth = 100;          // Max health
+
+    [Header("UI Settings")]
+    public Text healthText;              // UI text for health
 
     [Header("Movement Settings")]
     public float moveSpeed = 5f;        // Movement speed
@@ -70,6 +75,11 @@ public class SimplePlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    void Start()
+    {
+        UpdateHealthUI();
+    }
+
     void Update()
     {
         Move();
@@ -91,13 +101,10 @@ public class SimplePlayerController : MonoBehaviour
         bool isSneaking = Input.GetKey(KeyCode.LeftControl);
 
         HandleCamShake(moveMagnitude, isSprinting, isSneaking);
-
-
     }
 
     void Move()
     {
-
         // --- 1. Movement (WASD) ---
         // Get keyboard input (A/D for Horizontal, W/S for Vertical)
         float x = Input.GetAxis("Horizontal");
@@ -114,7 +121,6 @@ public class SimplePlayerController : MonoBehaviour
             currentSpeed *= sprintMultiplier;
         }
 
-
         // Sneaking
         if (Input.GetKey(KeyCode.LeftControl))
         {
@@ -123,8 +129,6 @@ public class SimplePlayerController : MonoBehaviour
 
         // Execute movement
         transform.position += move * currentSpeed * Time.deltaTime;
-
-
     }
 
     void HandleSneak()
@@ -163,14 +167,9 @@ public class SimplePlayerController : MonoBehaviour
         Vector3 camRot = playerCam.transform.localEulerAngles;
         camRot.z = currentLean;
 
-
         Quaternion baseRotation = Quaternion.Euler(-verticalLookRotation, playerCam.transform.localEulerAngles.y, 0f);
 
         Quaternion leanRotation = Quaternion.Euler(0f, 0f, currentLean);
-
-
-
-
     }
 
     void HandleGlance()
@@ -181,14 +180,12 @@ public class SimplePlayerController : MonoBehaviour
             targetRotation = 180f;
 
         glanceRotation = Mathf.Lerp(glanceRotation, targetRotation, Time.deltaTime * glanceSpeed);
-
     }
 
     void HandleCamShake(float moveMagnitude, bool isSprinting, bool isSneaking)
     {
         if (moveMagnitude > 0.1f)
         {
-
             float intensity = walkShakeIntensity;
             float frequency = walkShakeFrequency;
 
@@ -207,7 +204,6 @@ public class SimplePlayerController : MonoBehaviour
             Vector3 camPos = playerCam.transform.localPosition;
             camPos.y = defaultCamY + shakeAmount;
             playerCam.transform.localPosition = camPos;
-
         }
         else
         {
@@ -219,15 +215,12 @@ public class SimplePlayerController : MonoBehaviour
     }
     void CamLook()
     {
-
         //Mouse Look 
         // Get mouse horizontal movement amount
         float mouseX = Input.GetAxis("Mouse X") * lookSensitivity;
         //Get mouse vertical movement amount
         verticalLookRotation += Input.GetAxis("Mouse Y") * lookSensitivity;
         verticalLookRotation = Mathf.Clamp(verticalLookRotation, minLookAngle, maxLookAngle);
-
-
 
         // Rotate around the Y-axis
         transform.Rotate(Vector3.up * mouseX);
@@ -238,7 +231,6 @@ public class SimplePlayerController : MonoBehaviour
         Quaternion roll = Quaternion.Euler(0f, 0f, -currentLean);
 
         playerCam.transform.localRotation = glance * pitch * roll;
-
     }
 
     void Jump()
@@ -256,6 +248,7 @@ public class SimplePlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         curHealth -= damage;
+        UpdateHealthUI();
         if (curHealth <= 0)
         {
             Die();
@@ -264,8 +257,8 @@ public class SimplePlayerController : MonoBehaviour
 
     void Die()
     {
-        // Handle player death (e.g., respawn, game over screen)
-        Debug.Log("Player has died!");
+        Debug.Log("Player has died! Restarting level...");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void HandleInteraction()
@@ -286,4 +279,11 @@ public class SimplePlayerController : MonoBehaviour
         }
     }
 
+    void UpdateHealthUI()
+    {
+        if (healthText != null)
+        {
+            healthText.text = "Health: " + curHealth.ToString();
+        }
+    }
 }
