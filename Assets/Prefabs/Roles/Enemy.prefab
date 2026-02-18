@@ -139,12 +139,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   suspectToChaseLapse: 0.3
-  suspectSpeed: 3
+  suspectSpeed: 3.5
   investigateTime: 4
   chaseSpeed: 6
-  giveUpDistance: 12
+  loseSightTime: 3
   attackDistance: 3
   attackInterval: 1.5
+  attackDamage: 34
   showDebugGizmos: 1
 --- !u!195 &6339570501909426715
 NavMeshAgent:
