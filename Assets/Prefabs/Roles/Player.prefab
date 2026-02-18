@@ -299,7 +299,7 @@ MonoBehaviour:
   curHealth: 100
   maxHealth: 100
   moveSpeed: 3
-  sprintMultiplier: 1.5
+  sprintMultiplier: 2
   sneakMultiplier: 0.5
   crouchHeight: 1
   mouseSensitivity: 2
@@ -318,6 +318,7 @@ MonoBehaviour:
   sprintShakeFrequency: 12
   sneakShakeIntensity: 0.03
   sneakShakeFrequency: 5
+  inventory: {fileID: 0}
 --- !u!33 &4347699295143236799
 MeshFilter:
   m_ObjectHideFlags: 0
