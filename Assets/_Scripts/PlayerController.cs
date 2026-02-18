@@ -10,16 +10,16 @@ public class SimplePlayerController : MonoBehaviour
     public int maxHealth = 100;          // Max health
 
     [Header("UI Settings")]
-    public Text healthText;              // UI text for health
+    public Image healthImage;            // UI Image for health
+    public Sprite[] healthSprites;       // Array of health sprites (e.g., 0%, 16%, 33%, 50%, 66%, 83%, 100%)
 
     [Header("Movement Settings")]
     public float moveSpeed = 5f;        // Movement speed
     public float sprintMultiplier = 2f; // Sprint speed multiplier   
     public float sneakMultiplier = 0.5f;  // Sneak speed multiplier
 
-   
+    public float crouchHeight = 1f;    // Crouch height
     private float originalHeight;      // Original player height
-    public float crouchHeight = 0.5f; // Crouch height multiplier
 
     public float mouseSensitivity = 3f; // Mouse look sensitivity
     public float jumpForce = 5f;        // Jump force
@@ -134,26 +134,16 @@ public class SimplePlayerController : MonoBehaviour
 
     void HandleSneak()
     {
-        float targetHeight = originalHeight * crouchHeight; // Target height when crouching
-        float targetCamY = defaultCamY * crouchHeight; // Adjust this value to set how much the camera lowers when crouching
-
-        Debug.Log("Collider height: " + playerCollider.height + " | Cam Y: " + playerCam.transform.localPosition.y);
-        Debug.Log("CenterY: " + playerCollider.center.y);
-
-
-
-        bool sneaking = Input.GetKey(KeyCode.LeftControl);
-
-        // Adjust collider height
-        float newHeight = sneaking ? targetHeight : originalHeight;
-        playerCollider.height = Mathf.Lerp(playerCollider.height, newHeight, Time.deltaTime * 10f);
-
-        // Adjust camera height (base position before head-bob)
-        Vector3 camPos = playerCam.transform.localPosition;
-        float newCamY = sneaking ? targetCamY : defaultCamY;
-        camPos.y = Mathf.Lerp(camPos.y, newCamY, Time.deltaTime * 10f);
-        playerCam.transform.localPosition = camPos;
-
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            // Lower height
+            playerCollider.height = Mathf.Lerp(playerCollider.height, crouchHeight, Time.deltaTime * 10f);
+        }
+        else
+        {
+            // Return to normal height
+            playerCollider.height = Mathf.Lerp(playerCollider.height, originalHeight, Time.deltaTime * 10f);
+        }
     }
 
     void HandleLean()
@@ -195,8 +185,6 @@ public class SimplePlayerController : MonoBehaviour
 
     void HandleCamShake(float moveMagnitude, bool isSprinting, bool isSneaking)
     {
-        float baseCamY = isSneaking ? defaultCamY * crouchHeight : defaultCamY; // Base camera Y position depending on sneak state
-
         if (moveMagnitude > 0.1f)
         {
             float intensity = walkShakeIntensity;
@@ -212,22 +200,19 @@ public class SimplePlayerController : MonoBehaviour
                 intensity = sneakShakeIntensity;
                 frequency = sneakShakeFrequency;
             }
-            bobTimer += Time.deltaTime * frequency;
-            float shakeAmount = Mathf.Sin(bobTimer) * intensity;
-
+            bobTimer += Time.deltaTime * frequency * moveMagnitude;
+            float shakeAmount = Mathf.Sin(bobTimer) * intensity * moveMagnitude;
             Vector3 camPos = playerCam.transform.localPosition;
-            camPos.y = baseCamY + shakeAmount;
+            camPos.y = defaultCamY + shakeAmount;
             playerCam.transform.localPosition = camPos;
-
         }
         else
         {
             bobTimer = 0f;
             Vector3 camPos = playerCam.transform.localPosition;
-            camPos.y = baseCamY;
+            camPos.y = defaultCamY;
             playerCam.transform.localPosition = camPos;
         }
-
     }
     void CamLook()
     {
@@ -264,7 +249,12 @@ public class SimplePlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         curHealth -= damage;
+
+        // Ensure health doesn't drop below 0
+        if (curHealth < 0) curHealth = 0;
+
         UpdateHealthUI();
+
         if (curHealth <= 0)
         {
             Die();
@@ -297,9 +287,40 @@ public class SimplePlayerController : MonoBehaviour
 
     void UpdateHealthUI()
     {
-        if (healthText != null)
+        if (healthImage != null && healthSprites != null && healthSprites.Length > 0)
         {
-            healthText.text = "Health: " + curHealth.ToString();
+            // Calculate health percentage
+            float healthPercent = (float)curHealth / maxHealth * 100f;
+
+            // Change sprite based on current health percentage
+            if (healthPercent >= 100f)
+            {
+                healthImage.sprite = healthSprites[6]; // 100%
+            }
+            else if (healthPercent >= 83f)
+            {
+                healthImage.sprite = healthSprites[5]; // 83%
+            }
+            else if (healthPercent >= 66f)
+            {
+                healthImage.sprite = healthSprites[4]; // 66%
+            }
+            else if (healthPercent >= 50f)
+            {
+                healthImage.sprite = healthSprites[3]; // 50%
+            }
+            else if (healthPercent >= 33f)
+            {
+                healthImage.sprite = healthSprites[2]; // 33%
+            }
+            else if (healthPercent >= 16f)
+            {
+                healthImage.sprite = healthSprites[1]; // 16%
+            }
+            else
+            {
+                healthImage.sprite = healthSprites[0]; // 0%
+            }
         }
     }
 }

@@ -298,6 +298,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimplePlayerController
   curHealth: 100
   maxHealth: 100
+  healthImage: {fileID: 0}
+  healthSprites: []
   moveSpeed: 3
   sprintMultiplier: 2
   sneakMultiplier: 0.5
