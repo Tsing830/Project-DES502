@@ -87,6 +87,7 @@ public class SimplePlayerController : MonoBehaviour
     void EnsureHealthFillImage()
     {
         if (healthImage == null)
+        if (healthFillImage != null || healthImage == null)
         {
             return;
         }
@@ -132,6 +133,25 @@ public class SimplePlayerController : MonoBehaviour
         {
             healthFillImage.SetNativeSize();
         }
+        Transform existingFill = healthImage.transform.Find("StabilityFill");
+        if (existingFill != null)
+        {
+            healthFillImage = existingFill.GetComponent<Image>();
+            return;
+        }
+
+        GameObject fillObject = new GameObject("StabilityFill", typeof(RectTransform), typeof(Image));
+        fillObject.transform.SetParent(healthImage.transform, false);
+
+        RectTransform fillRect = fillObject.GetComponent<RectTransform>();
+        fillRect.anchorMin = Vector2.zero;
+        fillRect.anchorMax = Vector2.one;
+        fillRect.offsetMin = Vector2.zero;
+        fillRect.offsetMax = Vector2.zero;
+
+        healthFillImage = fillObject.GetComponent<Image>();
+        healthFillImage.raycastTarget = false;
+        healthFillImage.color = Color.white;
     }
 
     void Update()
@@ -375,6 +395,31 @@ public class SimplePlayerController : MonoBehaviour
             else
             {
                 ApplyHealthSprite(healthSprites[0]); // 0%
+                healthFillImage.sprite = healthSprites[6]; // 100%
+            }
+            else if (healthPercent >= 83f)
+            {
+                healthFillImage.sprite = healthSprites[5]; // 83%
+            }
+            else if (healthPercent >= 66f)
+            {
+                healthFillImage.sprite = healthSprites[4]; // 66%
+            }
+            else if (healthPercent >= 50f)
+            {
+                healthFillImage.sprite = healthSprites[3]; // 50%
+            }
+            else if (healthPercent >= 33f)
+            {
+                healthFillImage.sprite = healthSprites[2]; // 33%
+            }
+            else if (healthPercent >= 16f)
+            {
+                healthFillImage.sprite = healthSprites[1]; // 16%
+            }
+            else
+            {
+                healthFillImage.sprite = healthSprites[0]; // 0%
             }
         }
     }
