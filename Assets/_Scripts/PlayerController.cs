@@ -82,6 +82,7 @@ public class SimplePlayerController : MonoBehaviour
         HandleSneak();
         HandleLean();
         HandleGlance();
+        HandleInteraction();
         CamLook();
 
         float moveMagnitude = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).magnitude;
@@ -266,4 +267,23 @@ public class SimplePlayerController : MonoBehaviour
         // Handle player death (e.g., respawn, game over screen)
         Debug.Log("Player has died!");
     }
+
+    void HandleInteraction()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Ray ray = new Ray(playerCam.transform.position, playerCam.transform.forward);
+
+            if (Physics.Raycast(ray, out RaycastHit hit, 3f))
+            {
+                DoorLock door = hit.collider.GetComponentInParent<DoorLock>();
+
+                if (door != null)
+                {
+                    door.TryOpen();
+                }
+            }
+        }
+    }
+
 }

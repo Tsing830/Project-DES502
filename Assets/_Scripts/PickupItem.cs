@@ -3,8 +3,7 @@ using UnityEngine;
 public class PickupItem : MonoBehaviour
 {
     public string itemName; 
-
-    public float pickupRange = 2f;
+    public float pickupRange = 3f;
 
     void Update()
     {
@@ -20,16 +19,34 @@ public class PickupItem : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
         {
-            if (hit.collider.GetComponentInParent<PickupItem>() == this)
+            // Find the PickupItem on the hit object
+            PickupItem item = hit.collider.GetComponentInParent<PickupItem>();
 
+            // Only the item that was actually hit should run pickup logic
+            if (item == null || item != this)
+                return;
+
+            PlayerInventory inventory = FindFirstObjectByType<PlayerInventory>();
+            if (inventory == null)
+                return;
+
+            // Check if this item has a KeyItem component
+            KeyItem key = item.GetComponent<KeyItem>();
+
+            if (key != null && !string.IsNullOrEmpty(key.keyID))
             {
-                PlayerInventory inventory = FindFirstObjectByType<PlayerInventory>();
-                if (inventory != null)
-                {
-                    inventory.AddItem(itemName);
-                    Destroy(gameObject);
-                }
+                inventory.AddKey(key.keyID);
+                Debug.Log("Picked up key: " + key.keyID);
             }
+            else
+            {
+                inventory.AddItem(item.itemName);
+                Debug.Log("Picked up item: " + item.itemName);
+            }
+
+            Destroy(gameObject);
         }
+
     }
+
 }

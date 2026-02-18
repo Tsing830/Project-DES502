@@ -5,6 +5,9 @@ public class PlayerInventory : MonoBehaviour
 {
     public int maxItems = 10; // Maximum number of items the player can carry
     public List<string> inventory = new List<string>(); // List to hold the player's items
+    public List<string> keys = new List<string>();
+
+
 
     public void AddItem(string item)
     {
@@ -18,6 +21,20 @@ public class PlayerInventory : MonoBehaviour
             Debug.Log("Inventory is full! Cannot add more items.");
         }
     }
+
+    public void AddKey(string keyID)
+    {
+        if (!keys.Contains(keyID))
+            keys.Add(keyID);
+
+        Debug.Log("Picked up key: " + keyID);
+    }
+
+    public bool HasKey(string keyID)
+    {
+        return keys.Contains(keyID);
+    }
+
 
     public void RemoveItem(string item)
     {
