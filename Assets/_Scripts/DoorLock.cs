@@ -1,7 +1,7 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class DoorLock : MonoBehaviour
+public class DoorLock : MonoBehaviour, IInteractable    
 {
     [Header("Door Settings")]
     public string requiredKeyID; // The ID of the key required to unlock this door
@@ -13,6 +13,10 @@ public class DoorLock : MonoBehaviour
     private Vector3 closedPos;
     private Vector3 openPos;
 
+    public void Interact()
+    {
+        TryOpen();
+    }
 
     private PlayerInventory playerInventory; // Reference to the player's inventory
     void Start()

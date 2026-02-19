@@ -1,52 +1,29 @@
 using UnityEngine;
+using static UnityEditor.Progress;
 
-public class PickupItem : MonoBehaviour
+public class PickupItem : MonoBehaviour, IInteractable
 {
     public string itemName; 
-    public float pickupRange = 3f;
-
-    void Update()
+    
+    public void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        PlayerInventory playerInventory = FindFirstObjectByType<PlayerInventory>();
+    
+
+        KeyItem key = GetComponent<KeyItem>();
+
+        if (key != null && !string.IsNullOrEmpty(key.keyID))
         {
-            TryPickup();
+            playerInventory.AddKey(key.keyID);
+            Debug.Log("Picked up key: " + key.keyID);
         }
+        else
+        {
+            playerInventory.AddItem(itemName);
+            Debug.Log("Picked up item: " + itemName);
+        }
+        Destroy(gameObject);
     }
 
-    void TryPickup()
-    {
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-
-        if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
-        {
-            // Find the PickupItem on the hit object
-            PickupItem item = hit.collider.GetComponentInParent<PickupItem>();
-
-            // Only the item that was actually hit should run pickup logic
-            if (item == null || item != this)
-                return;
-
-            PlayerInventory inventory = FindFirstObjectByType<PlayerInventory>();
-            if (inventory == null)
-                return;
-
-            // Check if this item has a KeyItem component
-            KeyItem key = item.GetComponent<KeyItem>();
-
-            if (key != null && !string.IsNullOrEmpty(key.keyID))
-            {
-                inventory.AddKey(key.keyID);
-                Debug.Log("Picked up key: " + key.keyID);
-            }
-            else
-            {
-                inventory.AddItem(item.itemName);
-                Debug.Log("Picked up item: " + item.itemName);
-            }
-
-            Destroy(gameObject);
-        }
-
-    }
 
 }
