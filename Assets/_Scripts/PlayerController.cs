@@ -274,9 +274,16 @@ public class SimplePlayerController : MonoBehaviour
             Ray ray = new Ray(playerCam.transform.position, playerCam.transform.forward);
 
             if (Physics.Raycast(ray, out RaycastHit hit, 3f))
-            {
-                DoorLock door = hit.collider.GetComponentInParent<DoorLock>();
 
+            {
+                DoorButton button = hit.collider.GetComponentInParent<DoorButton>();
+                if (button != null)
+                {
+                    button.PressButton();
+                    return; 
+                }
+
+                DoorLock door = hit.collider.GetComponentInParent<DoorLock>();
                 if (door != null)
                 {
                     door.TryOpen();

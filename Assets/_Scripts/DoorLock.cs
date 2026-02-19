@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class DoorLock : MonoBehaviour
@@ -48,14 +49,17 @@ public class DoorLock : MonoBehaviour
         {
             Debug.Log("Door locked. Requires: " + requiredKeyID);
         }
+    }
 
-        void OpenDoor()
+       public void OpenDoor()
         {
             Debug.Log("Door opened!");
-            
+
             isOpening = true;
 
 
         }
-    }
+    
+
+        
 }
