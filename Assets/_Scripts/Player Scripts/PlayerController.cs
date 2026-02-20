@@ -5,12 +5,6 @@ using UnityEngine.UI;
 
 public class SimplePlayerController : MonoBehaviour
 {
-    public enum MovementStance
-    {
-        Walking,
-        Sprinting,
-        Crouching
-    }
 
     [Header("Movement Settings")]
     public float moveSpeed = 5f;        // Movement speed
@@ -59,8 +53,6 @@ public class SimplePlayerController : MonoBehaviour
     private Rigidbody rb;
     private CapsuleCollider playerCollider;
 
-    public MovementStance CurrentMovementStance { get; private set; } = MovementStance.Walking;
-
     void Awake()
     {
         // Get references to components
@@ -79,7 +71,6 @@ public class SimplePlayerController : MonoBehaviour
 
     void Update()
     {
-        UpdateMovementStance();
         Move();
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -99,26 +90,6 @@ public class SimplePlayerController : MonoBehaviour
         bool isSneaking = Input.GetKey(KeyCode.LeftControl);
 
         HandleCamShake(moveMagnitude, isSprinting, isSneaking);
-    }
-
-    void UpdateMovementStance()
-    {
-        bool isMoving = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).sqrMagnitude > 0.01f;
-        bool isCrouching = Input.GetKey(KeyCode.LeftControl);
-        bool isSprinting = Input.GetKey(KeyCode.LeftShift) && isMoving && !isCrouching;
-
-        if (isCrouching)
-        {
-            CurrentMovementStance = MovementStance.Crouching;
-        }
-        else if (isSprinting)
-        {
-            CurrentMovementStance = MovementStance.Sprinting;
-        }
-        else
-        {
-            CurrentMovementStance = MovementStance.Walking;
-        }
     }
 
     void Move()
