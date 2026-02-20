@@ -17,6 +17,8 @@ public class EnemyController : MonoBehaviour
     [Header("Detection Settings")]
     public float viewRadius = 15f;
     public float immediateChaseRadius = 5f;
+    public float sprintChaseRadiusMultiplier = 1.5f;
+    public float crouchChaseRadiusMultiplier = 0.7f;
     [Range(0, 360)]
     public float viewAngle = 90f;
     public LayerMask obstacleMask;
@@ -40,6 +42,7 @@ public class EnemyController : MonoBehaviour
 
     private NavMeshAgent agent;
     private Transform playerTransform;
+    private SimplePlayerController playerController;
     private PlayerHealth playerHealth;
     private int currentPointIndex = 0;
     private float waitTimer;
@@ -68,6 +71,7 @@ public class EnemyController : MonoBehaviour
         if (playerObj != null)
         {
             playerTransform = playerObj.transform;
+            playerController = playerObj.GetComponent<SimplePlayerController>();
             playerHealth = playerObj.GetComponent<PlayerHealth>();
         }
 
@@ -247,10 +251,24 @@ public class EnemyController : MonoBehaviour
 
         bool canSeePlayer = CanSeePlayer();
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+        float dynamicImmediateChaseRadius = GetImmediateChaseRadiusByPlayerStance();
+
+        if (ShouldTriggerSprintNoiseSuspect(distanceToPlayer, dynamicImmediateChaseRadius))
+        {
+            if (currentState == EnemyState.Patrol)
+            {
+                StartSuspect(playerTransform.position);
+            }
+            else if (currentState == EnemyState.Suspect)
+            {
+                lastKnownPlayerPos = playerTransform.position;
+                hasReachedSuspectPos = false;
+            }
+        }
 
         if (canSeePlayer)
         {
-            if (distanceToPlayer < immediateChaseRadius)
+            if (distanceToPlayer < dynamicImmediateChaseRadius)
             {
                 StartChase();
             }
@@ -278,6 +296,36 @@ public class EnemyController : MonoBehaviour
         {
             spotTimer = 0f;
         }
+    }
+
+    float GetImmediateChaseRadiusByPlayerStance()
+    {
+        if (playerController == null)
+        {
+            return immediateChaseRadius;
+        }
+
+        switch (playerController.CurrentMovementStance)
+        {
+            case SimplePlayerController.MovementStance.Sprinting:
+                return immediateChaseRadius * sprintChaseRadiusMultiplier;
+            case SimplePlayerController.MovementStance.Crouching:
+                return immediateChaseRadius * crouchChaseRadiusMultiplier;
+            default:
+                return immediateChaseRadius;
+        }
+    }
+
+    bool ShouldTriggerSprintNoiseSuspect(float distanceToPlayer, float dynamicImmediateChaseRadius)
+    {
+        if (playerController == null)
+        {
+            return false;
+        }
+
+        return playerController.CurrentMovementStance == SimplePlayerController.MovementStance.Sprinting
+               && distanceToPlayer <= dynamicImmediateChaseRadius
+               && currentState != EnemyState.Chase;
     }
 
     void StartSuspect(Vector3 triggerPos)
@@ -311,7 +359,7 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, viewRadius);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, immediateChaseRadius);
+        Gizmos.DrawWireSphere(transform.position, Application.isPlaying ? GetImmediateChaseRadiusByPlayerStance() : immediateChaseRadius);
 
         Gizmos.color = new Color(1f, 0.5f, 0f);
         Gizmos.DrawWireSphere(transform.position, attackDistance);
