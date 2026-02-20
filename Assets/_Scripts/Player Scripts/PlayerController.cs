@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class SimplePlayerController : MonoBehaviour
 {
+    public enum PlayerState
+    {
+        Idle, Walking, Sprinting, Sneaking
+    }
+    public PlayerState CurrentState
+    {
+        get;
+        private set;
+    }
 
     [Header("Movement Settings")]
     public float moveSpeed = 5f;        // Movement speed
@@ -89,7 +98,25 @@ public class SimplePlayerController : MonoBehaviour
         bool isSprinting = Input.GetKey(KeyCode.LeftShift);
         bool isSneaking = Input.GetKey(KeyCode.LeftControl);
 
+        UpdatePlayerState(moveMagnitude, isSprinting, isSneaking);
         HandleCamShake(moveMagnitude, isSprinting, isSneaking);
+
+    }
+    void UpdatePlayerState(float moveMagnitude, bool isSprinting, bool isSneaking)
+    {
+        if (moveMagnitude > 0.1f)
+        {
+            if (isSprinting)
+                CurrentState = PlayerState.Sprinting;
+            else if (isSneaking)
+                CurrentState = PlayerState.Sneaking;
+            else
+                CurrentState = PlayerState.Walking;
+        }
+        else
+        {
+            CurrentState = PlayerState.Idle;
+        }
     }
 
     void Move()
@@ -254,6 +281,6 @@ public class SimplePlayerController : MonoBehaviour
 
         }
     }
-    
-        
- }
+
+
+}

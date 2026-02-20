@@ -22,6 +22,12 @@ public class EnemyController : MonoBehaviour
     public LayerMask obstacleMask;
     public float suspectToChaseLapse = 1.5f;
 
+    [Header("Dynamic Detection Settings")]
+    public float sprintChaseRadiusMultiplier = 1.5f;  
+    public float sneakChaseRadiusMultiplier = 0.5f;  
+    private float baseImmediateChaseRadius;          
+    private SimplePlayerController playerController; 
+
     [Header("Suspect Settings")]
     public float suspectSpeed = 4.5f;
     public float investigateTime = 4f;
@@ -64,11 +70,15 @@ public class EnemyController : MonoBehaviour
         attackTimer = attackInterval;
         Debug.Log("Enemy starts in state: " + currentState);
 
+        baseImmediateChaseRadius = immediateChaseRadius;
+     
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
             playerTransform = playerObj.transform;
             playerHealth = playerObj.GetComponent<PlayerHealth>();
+
+            playerController = playerObj.GetComponent<SimplePlayerController>();
         }
 
         if (patrolPoints != null && patrolPoints.Length > 0)
@@ -90,6 +100,8 @@ public class EnemyController : MonoBehaviour
             attackTimer += Time.deltaTime;
         }
 
+        UpdateRadiusAndListen();
+
         switch (currentState)
         {
             case EnemyState.Patrol:
@@ -104,6 +116,38 @@ public class EnemyController : MonoBehaviour
 
             case EnemyState.Chase:
                 ChaseLogic();
+                break;
+        }
+    }
+
+    void UpdateRadiusAndListen()
+    {
+        if (playerController == null || playerTransform == null) return;
+
+        // change immediateChaseRadius by player statement
+        switch (playerController.CurrentState)
+        {
+            case SimplePlayerController.PlayerState.Sprinting:
+                immediateChaseRadius = baseImmediateChaseRadius * sprintChaseRadiusMultiplier;
+                //If the enemy has not yet entered pursuit mode and the player runs within the expanded area
+                //it will directly trigger the suspect to proceed with reconnaissance
+                if (currentState != EnemyState.Chase)
+                {
+                    float dist = Vector3.Distance(transform.position, playerTransform.position);
+                    if (dist <= immediateChaseRadius)
+                    {
+                        // in suspect
+                        StartSuspect(playerTransform.position);
+                    }
+                }
+                break;
+
+            case SimplePlayerController.PlayerState.Sneaking:
+                immediateChaseRadius = baseImmediateChaseRadius * sneakChaseRadiusMultiplier;
+                break;
+
+            default: 
+                immediateChaseRadius = baseImmediateChaseRadius;
                 break;
         }
     }
