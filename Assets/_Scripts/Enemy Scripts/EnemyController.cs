@@ -40,7 +40,7 @@ public class EnemyController : MonoBehaviour
 
     private NavMeshAgent agent;
     private Transform playerTransform;
-    private SimplePlayerController playerScript;
+    private PlayerHealth playerHealth;
     private int currentPointIndex = 0;
     private float waitTimer;
     private float investigateTimer;
@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour
         if (playerObj != null)
         {
             playerTransform = playerObj.transform;
-            playerScript = playerObj.GetComponent<SimplePlayerController>();
+            playerHealth = playerObj.GetComponent<PlayerHealth>();
         }
 
         if (patrolPoints != null && patrolPoints.Length > 0)
@@ -208,9 +208,9 @@ public class EnemyController : MonoBehaviour
             if (attackTimer >= attackInterval)
             {
                 Debug.Log("Under attack,-1 health");
-                if (playerScript != null)
+                if (playerHealth != null)
                 {
-                    playerScript.TakeDamage(attackDamage);
+                    playerHealth.TakeDamage(attackDamage);
                 }
                 attackTimer = 0f;
             }
@@ -331,5 +331,12 @@ public class EnemyController : MonoBehaviour
             angleInDegrees += transform.eulerAngles.y;
         }
         return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
+    }
+
+    public void ResetState()
+    {
+        transform.position = patrolPoints[0].position;
+        currentState = EnemyState.Patrol;
+        agent.ResetPath();
     }
 }

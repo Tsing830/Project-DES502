@@ -5,13 +5,6 @@ using UnityEngine.UI;
 
 public class SimplePlayerController : MonoBehaviour
 {
-    [Header("Stats")]
-    public int curHealth = 100;          // Player health
-    public int maxHealth = 100;          // Max health
-
-    [Header("UI Settings")]
-    public Image healthImage;            // UI Image for health
-    public Sprite[] healthSprites;       // Array of health sprites (e.g., 0%, 16%, 33%, 50%, 66%, 83%, 100%)
 
     [Header("Movement Settings")]
     public float moveSpeed = 5f;        // Movement speed
@@ -74,11 +67,6 @@ public class SimplePlayerController : MonoBehaviour
 
         // Lock cursor to the center of the screen
         Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    void Start()
-    {
-        UpdateHealthUI();
     }
 
     void Update()
@@ -246,26 +234,6 @@ public class SimplePlayerController : MonoBehaviour
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 
-    public void TakeDamage(int damage)
-    {
-        curHealth -= damage;
-
-        // Ensure health doesn't drop below 0
-        if (curHealth < 0) curHealth = 0;
-
-        UpdateHealthUI();
-
-        if (curHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        Debug.Log("Player has died! Restarting level...");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 
     void HandleInteraction()
     {
@@ -287,43 +255,5 @@ public class SimplePlayerController : MonoBehaviour
         }
     }
     
-
-    void UpdateHealthUI()
-    {
-        if (healthImage != null && healthSprites != null && healthSprites.Length > 0)
-        {
-            // Calculate health percentage
-            float healthPercent = (float)curHealth / maxHealth * 100f;
-
-            // Change sprite based on current health percentage
-            if (healthPercent >= 100f)
-            {
-                healthImage.sprite = healthSprites[6]; // 100%
-            }
-            else if (healthPercent >= 83f)
-            {
-                healthImage.sprite = healthSprites[5]; // 83%
-            }
-            else if (healthPercent >= 66f)
-            {
-                healthImage.sprite = healthSprites[4]; // 66%
-            }
-            else if (healthPercent >= 50f)
-            {
-                healthImage.sprite = healthSprites[3]; // 50%
-            }
-            else if (healthPercent >= 33f)
-            {
-                healthImage.sprite = healthSprites[2]; // 33%
-            }
-            else if (healthPercent >= 16f)
-            {
-                healthImage.sprite = healthSprites[1]; // 16%
-            }
-            else
-            {
-                healthImage.sprite = healthSprites[0]; // 0%
-            }
-        }
-    }
-}
+        
+ }
