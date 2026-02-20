@@ -12,10 +12,23 @@ public class HealthUI : MonoBehaviour
     void Start()
     {
         playerHealth = FindFirstObjectByType<PlayerHealth>();
+        if (playerHealth == null)
+        {
+            Debug.LogError("HealthUI could not find PlayerHealth in scene.");
+            return;
+        }
+
         playerHealth.OnHealthChanged += UpdateHealthUI;
 
         // Initialize UI
         UpdateHealthUI(playerHealth.currentHealth, playerHealth.maxHealth);
+    }
+    void OnDestroy()
+    {
+        if (playerHealth != null)
+        {
+            playerHealth.OnHealthChanged -= UpdateHealthUI;
+        }
     }
 
     void UpdateHealthUI(int current, int max)

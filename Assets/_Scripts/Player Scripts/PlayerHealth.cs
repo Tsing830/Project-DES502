@@ -14,12 +14,14 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth; // Initialize current health to max health
         playerRespawn = FindFirstObjectByType<PlayerRespawn>(); // Get reference to PlayerRespawn component
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount; // Reduce current health by the damage amount
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
 
         Debug.Log("Player took damage: " + damageAmount + ". Current health: " + currentHealth);
         if (currentHealth <= 0)
@@ -32,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth += healAmount; // Increase current health by the heal amount
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
         Debug.Log("Player healed: " + healAmount + ". Current health: " + currentHealth);
     }
 
@@ -40,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Player has died.");
         playerRespawn.Respawn();
         currentHealth = maxHealth;
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
 
     }
 }
