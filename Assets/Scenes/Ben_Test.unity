@@ -2650,7 +2650,7 @@ GameObject:
   - component: {fileID: 1643785776}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2977,6 +2977,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942863176}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1973070428 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4085777815761242344, guid: 3c41323ac0cf5b341bd52c1f3c89d3c1, type: 3}
+  m_PrefabInstance: {fileID: 1577255062155975452}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f380042ba97979488dfaeac7f715bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2020866293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3074,7 +3085,7 @@ MonoBehaviour:
   - {fileID: 1400673199}
   - {fileID: 1475101779}
   - {fileID: 1295780211}
-  doorToUnock: {fileID: 2045015029}
+  doorsToUnlock: []
 --- !u!1 &2079284690
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,6 +3491,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7370658534521808242, guid: 58f4677a13b2cd34c8ec747f905de943, type: 3}
       propertyPath: linkedDoor
+      value: 
+      objectReference: {fileID: 998127690}
+    - target: {fileID: 7370658534521808242, guid: 58f4677a13b2cd34c8ec747f905de943, type: 3}
+      propertyPath: linkedDoors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370658534521808242, guid: 58f4677a13b2cd34c8ec747f905de943, type: 3}
+      propertyPath: 'linkedDoors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1973070428}
+    - target: {fileID: 7370658534521808242, guid: 58f4677a13b2cd34c8ec747f905de943, type: 3}
+      propertyPath: 'linkedDoors.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2045015029}
+    - target: {fileID: 7370658534521808242, guid: 58f4677a13b2cd34c8ec747f905de943, type: 3}
+      propertyPath: 'linkedDoors.Array.data[2]'
       value: 
       objectReference: {fileID: 998127690}
     m_RemovedComponents: []

@@ -4,7 +4,7 @@ public class ButtonSequenceManager : MonoBehaviour
 {
     [Header("Button Sequence Settings")]
     public DoorButton[] sequence; // Array of buttons in the sequence
-    public DoorLock doorToUnock; // The door that will be unlocked when the sequence is completed
+    public DoorLock[] doorsToUnlock; // The door that will be unlocked when the sequence is completed
 
     private int currentIndex = 0; // Tracks the current button in the sequence
 
@@ -16,7 +16,8 @@ public class ButtonSequenceManager : MonoBehaviour
             if (currentIndex >= sequence.Length)
             {
                 Debug.Log("Correct sequence! Unlocking door.");
-                doorToUnock.OpenDoor();
+                foreach (DoorLock doorToUnlock in doorsToUnlock)
+                    doorToUnlock.OpenDoor();
                 currentIndex = 0; // Reset the sequence
             }
         }

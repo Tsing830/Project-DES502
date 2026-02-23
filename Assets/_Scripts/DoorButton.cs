@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DoorButton : MonoBehaviour, IInteractable
 {
-    public DoorLock linkedDoor; // Reference to the door this button controls
+    public DoorLock[] linkedDoors; // Reference to the door this button controls
     public ButtonSequenceManager sequenceManager; // Optional reference to a sequence manager if this button is part of a sequence
 
     public void Interact()
@@ -16,9 +16,10 @@ public class DoorButton : MonoBehaviour, IInteractable
         }   
 
 
-        if (linkedDoor != null)
+        if (linkedDoors != null)
         {
-            linkedDoor.OpenDoor();
+            foreach (DoorLock linkedDoor in linkedDoors)
+                linkedDoor.OpenDoor();
             Debug.Log("Button pressed");
         }
     }
