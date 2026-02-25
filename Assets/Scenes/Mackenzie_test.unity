@@ -12928,8 +12928,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690eea1f0e5fa3543bfdc35187d9294d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 0}
-  lines: []
+  textComponent: {fileID: 1916494931}
+  lines:
+  - 
   textSpeed: 0
 --- !u!1 &1511442618
 GameObject:
