@@ -26,6 +26,10 @@ public class SimplePlayerController : MonoBehaviour
     public float mouseSensitivity = 3f; // Mouse look sensitivity
     public float jumpForce = 5f;        // Jump force
 
+    [Header("Interaction Settings")]
+    public float interactRange = 3f;
+    [Min(0f)] public float interactRadius = 0.2f;
+
     [Header("Camera Settings")]
     public float lookSensitivity = 2f; // Camera look sensitivity
     public float maxLookAngle = 80f;  // Max vertical look angle
@@ -264,23 +268,37 @@ public class SimplePlayerController : MonoBehaviour
 
     void HandleInteraction()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (!Input.GetKeyDown(KeyCode.F) || playerCam == null) return;
+
+        Ray ray = playerCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+
+        if (TryGetInteractable(ray, out IInteractable interactable))
         {
-            Ray ray = new Ray(playerCam.transform.position, playerCam.transform.forward);
-
-            if (Physics.Raycast(ray, out RaycastHit hit, 3f))
-            {
-                IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
-
-                if (interactable != null)
-                {
-                    interactable.Interact();
-                }
-            }
-
-
+            interactable.Interact();
         }
+    }
+
+    bool TryGetInteractable(Ray ray, out IInteractable interactable)
+    {
+        interactable = null;
+
+        if (Physics.Raycast(ray, out RaycastHit hit, interactRange, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide))
+        {
+            interactable = hit.collider.GetComponentInParent<IInteractable>();
+            if (interactable != null) return true;
+        }
+
+        if (interactRadius <= 0f) return false;
+
+        if (Physics.SphereCast(ray, interactRadius, out RaycastHit sphereHit, interactRange, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide))
+        {
+            interactable = sphereHit.collider.GetComponentInParent<IInteractable>();
+            return interactable != null;
+        }
+
+        return false;
     }
 
 
 }
+

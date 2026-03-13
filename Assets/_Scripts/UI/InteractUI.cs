@@ -7,6 +7,7 @@ public class PlayerInteractUI : MonoBehaviour
 
     [Header("Raycast Settings")]
     public float interactRange = 3f;
+    [Min(0f)] public float interactRadius = 0.2f;
     private Camera playerCam;
 
     void Start()
@@ -27,28 +28,38 @@ public class PlayerInteractUI : MonoBehaviour
     {
         if (interactPrompt == null || playerCam == null) return;
 
-        Ray ray = new Ray(playerCam.transform.position, playerCam.transform.forward);
+        Ray ray = playerCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        // Check if looking at an object within range
-        if (Physics.Raycast(ray, out RaycastHit hit, interactRange))
+        // First try a precise center ray, then a small sphere cast for aim tolerance.
+        if (TryGetInteractable(ray, out _))
         {
-            IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
-
-            if (interactable != null)
-            {
-                // Show UI if it's interactable
-                if (!interactPrompt.activeSelf) interactPrompt.SetActive(true);
-            }
-            else
-            {
-                // Hide UI if it's not interactable
-                if (interactPrompt.activeSelf) interactPrompt.SetActive(false);
-            }
+            if (!interactPrompt.activeSelf) interactPrompt.SetActive(true);
         }
         else
         {
             // Hide UI if looking at nothing
             if (interactPrompt.activeSelf) interactPrompt.SetActive(false);
         }
+    }
+
+    bool TryGetInteractable(Ray ray, out IInteractable interactable)
+    {
+        interactable = null;
+
+        if (Physics.Raycast(ray, out RaycastHit hit, interactRange, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide))
+        {
+            interactable = hit.collider.GetComponentInParent<IInteractable>();
+            if (interactable != null) return true;
+        }
+
+        if (interactRadius <= 0f) return false;
+
+        if (Physics.SphereCast(ray, interactRadius, out RaycastHit sphereHit, interactRange, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide))
+        {
+            interactable = sphereHit.collider.GetComponentInParent<IInteractable>();
+            return interactable != null;
+        }
+
+        return false;
     }
 }
