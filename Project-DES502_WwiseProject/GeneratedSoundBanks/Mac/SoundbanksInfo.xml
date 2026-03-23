@@ -23,18 +23,18 @@
 				<Bus Id="2246998526" Name="Main Audio Bus" ObjectPath="\Busses\Default Work Unit\Main Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}" Language="SFX" Hash="{174811B1-577A-9A38-D8C4-687B7E426040}">
+		<SoundBank Id="3161908922" Type="User" GUID="{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}" Language="SFX" Hash="{E6221080-8DD4-E357-C4CC-A2DFF6B79C69}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="287231370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience1.wav</ShortName>
-					<CachePath>3D/{3DF9DB39-72F7-A311-F389-3ED0494E2DD4}.wem</CachePath>
+					<CachePath>AF/{AF841AEF-F03B-4809-104C-56F8EBF37085}.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1117071627" Name="Play_Ambience1" ObjectPath="\Events\Default Work Unit\Play_Ambience1" GUID="{A6EFCFFC-BA02-47FA-A340-8A684E133F22}" DurationType="OneShot" DurationMin="238.14278" DurationMax="238.14278">
+				<Event Id="1117071627" Name="Play_Ambience1" ObjectPath="\Events\Default Work Unit\Play_Ambience1" GUID="{A6EFCFFC-BA02-47FA-A340-8A684E133F22}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="287231370"/>
 					</MediaRefs>
@@ -42,5 +42,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ACBA407C-1B7B-CEF4-0488-E3F199948A90}</FileHash>
+	<FileHash>{A83AD5B2-B216-A9B0-4B47-4E472B28AE52}</FileHash>
 </SoundBanksInfo>

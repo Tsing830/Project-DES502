@@ -56,7 +56,7 @@
     "Type": "User",
     "GUID": "{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}",
     "Language": "SFX",
-    "Hash": "{174811B1-577A-9A38-D8C4-687B7E426040}",
+    "Hash": "{E6221080-8DD4-E357-C4CC-A2DFF6B79C69}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -67,7 +67,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Ambience1.wav",
-      "CachePath": "3D/{3DF9DB39-72F7-A311-F389-3ED0494E2DD4}.wem"
+      "CachePath": "AF/{AF841AEF-F03B-4809-104C-56F8EBF37085}.wem"
      }
     ],
     "Events": [
@@ -76,9 +76,7 @@
       "Name": "Play_Ambience1",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Ambience1",
       "GUID": "{A6EFCFFC-BA02-47FA-A340-8A684E133F22}",
-      "DurationType": "OneShot",
-      "DurationMin": "238.14278",
-      "DurationMax": "238.14278",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "287231370"
@@ -88,6 +86,6 @@
     ]
    }
   ],
-  "FileHash": "{39A4EB3E-A59D-D173-971C-33F4AC9D5540}"
+  "FileHash": "{3D158481-3FF2-64EE-0493-BD105586E29D}"
  }
 }

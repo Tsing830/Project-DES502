@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	1117071627	Play_Ambience1			\Default Work Unit\Play_Ambience1	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	287231370	Ambience1	.cache\3D\{3DF9DB39-72F7-A311-F389-3ED0494E2DD4}.wem		\Containers\Default Work Unit\Ambience1		45723556
+	287231370	Ambience1	.cache\AF\{AF841AEF-F03B-4809-104C-56F8EBF37085}.wem		\Containers\Default Work Unit\Ambience1		45723556
 
