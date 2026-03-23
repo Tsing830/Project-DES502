@@ -1,0 +1,93 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "RootPaths": {
+   "ProjectRoot": "../..",
+   "SourceFilesRoot": "../../.cache",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "."
+  },
+  "DialogueEvents": [],
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{8CBC2CD0-42C0-9F20-AFE8-5201E29BE1BB}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Devices\\Default Work Unit\\No_Output",
+       "GUID": "{19266694-6DF8-406E-B5D2-78225ED8C0C0}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Devices\\Default Work Unit\\System",
+       "GUID": "{DFF08819-E4F9-4664-ADBA-62DCBC322F76}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "2246998526",
+      "Name": "Main Audio Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ]
+   },
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}",
+    "Language": "SFX",
+    "Hash": "{174811B1-577A-9A38-D8C4-687B7E426040}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "287231370",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambience1.wav",
+      "CachePath": "3D/{3DF9DB39-72F7-A311-F389-3ED0494E2DD4}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1117071627",
+      "Name": "Play_Ambience1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ambience1",
+      "GUID": "{A6EFCFFC-BA02-47FA-A340-8A684E133F22}",
+      "DurationType": "OneShot",
+      "DurationMin": "238.14278",
+      "DurationMax": "238.14278",
+      "MediaRefs": [
+       {
+        "Id": "287231370"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{39A4EB3E-A59D-D173-971C-33F4AC9D5540}"
+ }
+}

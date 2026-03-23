@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3374D48D-61FA-42AF-8840-3CE6C895A360}" SchemaVersion="133">
 	<Containers>
-		<WorkUnit Name="Default Work Unit" ID="{3374D48D-61FA-42AF-8840-3CE6C895A360}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3374D48D-61FA-42AF-8840-3CE6C895A360}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Ambience1" ID="{6658AD32-68E0-4762-A478-886E4B4BF19E}" ShortID="144857738">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambience1" ID="{002F462D-E920-4F1C-B55E-5378D1B1ED8A}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="2.0549"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="3.42482"/>
+								<Property Name="LoopEnd" Type="Real64" Value="238.14277"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Ambience1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="287231370"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambience1" ID="{002F462D-E920-4F1C-B55E-5378D1B1ED8A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</Containers>
 </WwiseDocument>
