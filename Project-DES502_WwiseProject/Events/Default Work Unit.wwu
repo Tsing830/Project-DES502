@@ -17,6 +17,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_WardenFootsteps" ID="{BF686C96-5DC3-4257-96CE-797A4D97B260}">
+					<ChildrenList>
+						<Action Name="" ID="{F002AD6B-D52C-4224-BF23-B89D45F57BAB}" ShortID="993579493">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WardenFootsteps" ID="{06C8C2EF-4C83-4F65-BDF9-AA4CE35EAEAD}" WorkUnitID="{3374D48D-61FA-42AF-8840-3CE6C895A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

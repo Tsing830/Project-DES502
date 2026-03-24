@@ -1,6 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
+	956504242	Play_WardenFootsteps			\Default Work Unit\Play_WardenFootsteps	
 	1117071627	Play_Ambience1			\Default Work Unit\Play_Ambience1	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	287231370	Ambience1	.cache\AF\{AF841AEF-F03B-4809-104C-56F8EBF37085}.wem		\Containers\Default Work Unit\Ambience1		45723556
+	82884822	WFootstep4	.cache\54\{5466A2E2-C7F6-E7ED-C30C-4EE14CF63FDF}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep4		26686
+	128340803	WFootstep11	.cache\FE\{FE70B3EE-E221-139D-C3D5-F98A471FA4EA}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep11		47366
+	268458190	WFootstep2	.cache\74\{745D94C3-FEF5-0660-321C-BFA011A3271D}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep2		42934
+	283700716	WFootstep10	.cache\02\{02ECAD11-E28B-F786-A1DF-78F912679810}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep10		45890
+	287231370	Ambience1	.cache\AF\{AF841AEF-F03B-4809-104C-56F8EBF37085}.wem		\Containers\Default Work Unit\Ambience\Ambience1		45723556
+	289668659	WFootstep8	.cache\BD\{BD1B11CD-5D14-CBD7-418B-F4C02EA12D87}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep8		26684
+	360019234	WFootstep13	.cache\43\{433117D3-97F9-6161-12A6-3A28CA4560BC}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep13		47366
+	446830826	WFootstep6	.cache\0E\{0E5A093E-D0FE-4043-4018-CA83D91973A8}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep6		28162
+	533204647	WFootstep12	.cache\05\{0583CFF0-A8B4-FEC0-CBA8-E47A5CE9CE42}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep12		41458
+	631612279	WFootstep5	.cache\D9\{D95A9202-CB3F-C133-DE97-08D3650C5D70}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep5		29640
+	633901146	WFootstep7	.cache\44\{44B43D41-C91A-ABCD-82A4-24C3F5E33CBD}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep7		37026
+	696196245	WFootstep3	.cache\9F\{9F865EFE-78F2-B632-63CA-388318D43760}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep3		39980
+	815128207	WFootstep9	.cache\50\{50B9371F-4241-F33F-D380-55271BECB447}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep9		35548
+	934357879	WFootstep1	.cache\0B\{0B9F9A1A-5DB4-2695-461C-82E8E8D4F060}.wem		\Containers\Default Work Unit\WardenFootsteps\WFootstep1		39980
 

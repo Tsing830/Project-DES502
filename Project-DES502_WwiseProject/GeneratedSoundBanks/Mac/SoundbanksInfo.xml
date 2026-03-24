@@ -23,14 +23,66 @@
 				<Bus Id="2246998526" Name="Main Audio Bus" ObjectPath="\Busses\Default Work Unit\Main Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}" Language="SFX" Hash="{E6221080-8DD4-E357-C4CC-A2DFF6B79C69}">
+		<SoundBank Id="3161908922" Type="User" GUID="{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}" Language="SFX" Hash="{84A3DC05-E400-2FB5-92EF-9FFE97DC237B}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="82884822" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep4.wav</ShortName>
+					<CachePath>54/{5466A2E2-C7F6-E7ED-C30C-4EE14CF63FDF}.wem</CachePath>
+				</File>
+				<File Id="128340803" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep11.wav</ShortName>
+					<CachePath>FE/{FE70B3EE-E221-139D-C3D5-F98A471FA4EA}.wem</CachePath>
+				</File>
+				<File Id="268458190" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep2.wav</ShortName>
+					<CachePath>74/{745D94C3-FEF5-0660-321C-BFA011A3271D}.wem</CachePath>
+				</File>
+				<File Id="283700716" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep10.wav</ShortName>
+					<CachePath>02/{02ECAD11-E28B-F786-A1DF-78F912679810}.wem</CachePath>
+				</File>
 				<File Id="287231370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience1.wav</ShortName>
 					<CachePath>AF/{AF841AEF-F03B-4809-104C-56F8EBF37085}.wem</CachePath>
+				</File>
+				<File Id="289668659" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep8.wav</ShortName>
+					<CachePath>BD/{BD1B11CD-5D14-CBD7-418B-F4C02EA12D87}.wem</CachePath>
+				</File>
+				<File Id="360019234" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep13.wav</ShortName>
+					<CachePath>43/{433117D3-97F9-6161-12A6-3A28CA4560BC}.wem</CachePath>
+				</File>
+				<File Id="446830826" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep6.wav</ShortName>
+					<CachePath>0E/{0E5A093E-D0FE-4043-4018-CA83D91973A8}.wem</CachePath>
+				</File>
+				<File Id="533204647" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep12.wav</ShortName>
+					<CachePath>05/{0583CFF0-A8B4-FEC0-CBA8-E47A5CE9CE42}.wem</CachePath>
+				</File>
+				<File Id="631612279" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep5.wav</ShortName>
+					<CachePath>D9/{D95A9202-CB3F-C133-DE97-08D3650C5D70}.wem</CachePath>
+				</File>
+				<File Id="633901146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep7.wav</ShortName>
+					<CachePath>44/{44B43D41-C91A-ABCD-82A4-24C3F5E33CBD}.wem</CachePath>
+				</File>
+				<File Id="696196245" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep3.wav</ShortName>
+					<CachePath>9F/{9F865EFE-78F2-B632-63CA-388318D43760}.wem</CachePath>
+				</File>
+				<File Id="815128207" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep9.wav</ShortName>
+					<CachePath>50/{50B9371F-4241-F33F-D380-55271BECB447}.wem</CachePath>
+				</File>
+				<File Id="934357879" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WardenFootsteps\WFootstep1.wav</ShortName>
+					<CachePath>0B/{0B9F9A1A-5DB4-2695-461C-82E8E8D4F060}.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -39,8 +91,25 @@
 						<MediaRef Id="287231370"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="956504242" Name="Play_WardenFootsteps" ObjectPath="\Events\Default Work Unit\Play_WardenFootsteps" GUID="{BF686C96-5DC3-4257-96CE-797A4D97B260}" DurationType="OneShot" DurationMin="0.26907387" DurationMax="0.5216752">
+					<MediaRefs>
+						<MediaRef Id="82884822"/>
+						<MediaRef Id="128340803"/>
+						<MediaRef Id="268458190"/>
+						<MediaRef Id="283700716"/>
+						<MediaRef Id="289668659"/>
+						<MediaRef Id="360019234"/>
+						<MediaRef Id="446830826"/>
+						<MediaRef Id="533204647"/>
+						<MediaRef Id="631612279"/>
+						<MediaRef Id="633901146"/>
+						<MediaRef Id="696196245"/>
+						<MediaRef Id="815128207"/>
+						<MediaRef Id="934357879"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A83AD5B2-B216-A9B0-4B47-4E472B28AE52}</FileHash>
+	<FileHash>{6F5F3023-D92B-056C-6699-0EA0801E62D9}</FileHash>
 </SoundBanksInfo>
