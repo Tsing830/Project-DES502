@@ -513,6 +513,35 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="ItemPickup" ID="{41BE8753-0FE2-44DB-B677-D26B886F2BE9}" ShortID="54955935">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ItemPickup" ID="{6A34543D-DFA6-464F-ACE6-399832C60E48}">
+							<Language>SFX</Language>
+							<AudioFile>ItemPickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="619210347"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="ItemPickup" ID="{6A34543D-DFA6-464F-ACE6-399832C60E48}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
