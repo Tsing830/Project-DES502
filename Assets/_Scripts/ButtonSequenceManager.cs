@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonSequenceManager : MonoBehaviour
 {
+    public event Action OnSequenceCompleted;
+
     [Header("Button Sequence Settings")]
     public DoorButton[] sequence; // Array of buttons in the sequence
     public DoorLock[] doorsToUnlock; // The door that will be unlocked when the sequence is completed
@@ -45,6 +48,7 @@ public class ButtonSequenceManager : MonoBehaviour
                 }
 
                 UpdateObjectiveAfterSequenceComplete();
+                OnSequenceCompleted?.Invoke();
                 currentIndex = 0; // Reset the sequence
             }
         }

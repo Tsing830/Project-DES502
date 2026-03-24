@@ -383,4 +383,87 @@ public class EnemyController : MonoBehaviour
         currentState = EnemyState.Patrol;
         agent.ResetPath();
     }
+
+    public void TeleportAndSetPatrolRoute(Transform teleportTarget, Transform[] newPatrolPoints, bool startFromFirstPatrolPoint = true)
+    {
+        if (teleportTarget == null)
+        {
+            Debug.LogWarning($"{name}: Teleport target is not assigned.");
+            return;
+        }
+
+        if (agent == null)
+            agent = GetComponent<NavMeshAgent>();
+
+        patrolPoints = newPatrolPoints;
+        currentState = EnemyState.Patrol;
+        previousState = currentState;
+
+        waitTimer = 0f;
+        investigateTimer = 0f;
+        spotTimer = 0f;
+        attackTimer = attackInterval;
+        loseSightTimer = 0f;
+        hasReachedSuspectPos = false;
+        lastKnownPlayerPos = Vector3.zero;
+
+        Vector3 targetPosition = teleportTarget.position;
+
+        if (agent != null)
+        {
+            agent.isStopped = false;
+            agent.ResetPath();
+
+            if (agent.isOnNavMesh)
+            {
+                if (!agent.Warp(targetPosition))
+                    transform.position = targetPosition;
+            }
+            else
+            {
+                transform.position = targetPosition;
+            }
+
+            agent.speed = moveSpeed;
+        }
+        else
+        {
+            transform.position = targetPosition;
+        }
+
+        if (patrolPoints == null || patrolPoints.Length == 0)
+            return;
+
+        currentPointIndex = startFromFirstPatrolPoint
+            ? 0
+            : GetClosestPatrolPointIndex(targetPosition);
+
+        if (agent != null)
+            agent.destination = patrolPoints[currentPointIndex].position;
+    }
+
+    private int GetClosestPatrolPointIndex(Vector3 fromPosition)
+    {
+        if (patrolPoints == null || patrolPoints.Length == 0)
+            return 0;
+
+        int closestIndex = 0;
+        float closestDistance = float.MaxValue;
+
+        for (int i = 0; i < patrolPoints.Length; i++)
+        {
+            Transform patrolPoint = patrolPoints[i];
+            if (patrolPoint == null)
+                continue;
+
+            float distance = Vector3.SqrMagnitude(patrolPoint.position - fromPosition);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestIndex = i;
+            }
+        }
+
+        return closestIndex;
+    }
 }
