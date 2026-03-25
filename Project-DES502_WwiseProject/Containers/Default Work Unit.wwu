@@ -542,6 +542,460 @@
 						<ActiveSource Name="ItemPickup" ID="{6A34543D-DFA6-464F-ACE6-399832C60E48}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="Buttons, Typing" ID="{B45B8830-F21A-4E81-A5B6-DC1C2D1A2246}" ShortID="506457295">
+					<ChildrenList>
+						<Sound Name="ButtonClick1" ID="{1AE32AFE-5B7F-428F-9746-149EFA5EBB5F}" ShortID="448601896">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ButtonClick1" ID="{B9C1688B-FB5E-4849-BE0E-CC83113FC21D}">
+									<Language>SFX</Language>
+									<AudioFile>Buttons, Typing\ButtonClick1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1050000206"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ButtonClick1" ID="{B9C1688B-FB5E-4849-BE0E-CC83113FC21D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ButtonClick2" ID="{B0572820-D189-46B4-84B0-7F0AFBCBFF2C}" ShortID="710951470">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ButtonClick2" ID="{3A634E4A-9676-45DA-96D6-8C8A21DDF764}">
+									<Language>SFX</Language>
+									<AudioFile>Buttons, Typing\ButtonClick2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="461650631"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ButtonClick2" ID="{3A634E4A-9676-45DA-96D6-8C8A21DDF764}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ButtonClick3" ID="{BA3477BA-8608-4787-8A12-60EB4C5BCF95}" ShortID="126263159">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ButtonClick3" ID="{BD3E8BB1-C1EC-491F-9145-A409FE8E5F3B}">
+									<Language>SFX</Language>
+									<AudioFile>Buttons, Typing\ButtonClick3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="591672127"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ButtonClick3" ID="{BD3E8BB1-C1EC-491F-9145-A409FE8E5F3B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ButtonClick4" ID="{99709DD3-F554-4A96-97EE-C8721D78691B}" ShortID="703648936">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ButtonClick4" ID="{23454ED7-A50D-49A4-ABC9-9AE1218C017B}">
+									<Language>SFX</Language>
+									<AudioFile>Buttons, Typing\ButtonClick4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="911864688"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ButtonClick4" ID="{23454ED7-A50D-49A4-ABC9-9AE1218C017B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Typing1" ID="{4D1555F5-93B6-464F-B937-9E3D0CB1DB12}" ShortID="906708022">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Typing5" ID="{08ED630F-96E5-4F85-A626-A67DBBB0176B}">
+									<Language>SFX</Language>
+									<AudioFile>Buttons, Typing\Typing5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="440618734"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Typing5" ID="{08ED630F-96E5-4F85-A626-A67DBBB0176B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Typing2" ID="{5A60B292-82CC-4E55-9A1E-393F8D77FBC3}" ShortID="231129259">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Typing6" ID="{C55ACEA4-1F85-408B-86CF-618D581B5260}">
+									<Language>SFX</Language>
+									<AudioFile>Buttons, Typing\Typing6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="19400573"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Typing6" ID="{C55ACEA4-1F85-408B-86CF-618D581B5260}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<RandomSequenceContainer Name="WardenAttack" ID="{62AF397A-D7A2-45F2-A377-D46A4B7C82EA}" ShortID="916685339">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{7CA1ADBF-6E69-4552-A1B0-80A1D3C1B668}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="250"/>
+											<Property Name="Min" Type="Real64" Value="-250"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="WAttack1" ID="{083B2CCE-98F3-41A8-A0DD-1D4DA3EDEF13}" ShortID="927022680">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WAttack1" ID="{12558165-EEEB-4E81-842C-DADECEBDF4F5}">
+									<Language>SFX</Language>
+									<AudioFile>WardenAttack\WAttack1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="782141628"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WAttack1" ID="{12558165-EEEB-4E81-842C-DADECEBDF4F5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WAttack2" ID="{403A5D21-83D7-4AAB-A970-50C66C8D3AB9}" ShortID="811263437">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WAttack2" ID="{9C76ADB3-4F67-4387-9D62-5F8B34121D3C}">
+									<Language>SFX</Language>
+									<AudioFile>WardenAttack\WAttack2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="256893813"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WAttack2" ID="{9C76ADB3-4F67-4387-9D62-5F8B34121D3C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WAttack3" ID="{E0AC216A-BBD3-4E5E-8997-2F2924B259D2}" ShortID="885302171">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WAttack3" ID="{DF95D5BA-1DAC-4903-B1A7-F2B0954A8D49}">
+									<Language>SFX</Language>
+									<AudioFile>WardenAttack\WAttack3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="741340674"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WAttack3" ID="{DF95D5BA-1DAC-4903-B1A7-F2B0954A8D49}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WAttack4" ID="{D0DCB7C7-D486-43AF-A41A-FA4EA7E07FED}" ShortID="49455531">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WAttack4" ID="{8E8C2D09-2470-49F1-BC2E-7C377CCE3A71}">
+									<Language>SFX</Language>
+									<AudioFile>WardenAttack\WAttack4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="542260001"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WAttack4" ID="{8E8C2D09-2470-49F1-BC2E-7C377CCE3A71}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WAttack5" ID="{5A4F2824-8899-4F5F-839F-CA58BE78F58B}" ShortID="38582463">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WAttack5" ID="{A79D0737-4A04-4C17-A0CC-BE373990279F}">
+									<Language>SFX</Language>
+									<AudioFile>WardenAttack\WAttack5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="796036089"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WAttack5" ID="{A79D0737-4A04-4C17-A0CC-BE373990279F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WAttack6" ID="{B7E243E9-2D01-4FC4-A218-D1E17927F4E4}" ShortID="313455627">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WAttack6" ID="{7E1E1D85-E991-4F89-AE60-D53EA2C32333}">
+									<Language>SFX</Language>
+									<AudioFile>WardenAttack\WAttack6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="887286527"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WAttack6" ID="{7E1E1D85-E991-4F89-AE60-D53EA2C32333}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WAttack7" ID="{378B8DB9-9619-454F-B671-ED6769ED94E3}" ShortID="411148598">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WAttack7" ID="{72A4A847-941B-4436-B996-982BF5AE574C}">
+									<Language>SFX</Language>
+									<AudioFile>WardenAttack\WAttack7.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="537527330"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WAttack7" ID="{72A4A847-941B-4436-B996-982BF5AE574C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Scuttler" ID="{A9586988-9895-4A38-B21B-D3ED1E28437F}" ShortID="1042821034">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{27A1663F-5BEB-49F8-AB60-214EE068AE97}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Scuttler1" ID="{6DC3B7FD-BAA2-4269-BCE7-DE78F8261DF2}" ShortID="13812183">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuttler1" ID="{DE5B3D71-412F-4DE6-9A69-3C0D7A66464F}">
+									<Language>SFX</Language>
+									<AudioFile>Scuttler\Scuttler1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="218535661"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuttler1" ID="{DE5B3D71-412F-4DE6-9A69-3C0D7A66464F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scuttler2" ID="{A67A6988-80F1-4491-93D3-E2C3E6AA3074}" ShortID="753866479">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuttler2" ID="{115D92CF-1E44-49CA-B2B9-FD3771D0F41E}">
+									<Language>SFX</Language>
+									<AudioFile>Scuttler\Scuttler2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="841369147"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuttler2" ID="{115D92CF-1E44-49CA-B2B9-FD3771D0F41E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scuttler3" ID="{A803DB3B-4258-4342-9582-3653C7CB181E}" ShortID="428198190">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuttler3" ID="{99A35500-0714-4919-8D6A-30570DED90E0}">
+									<Language>SFX</Language>
+									<AudioFile>Scuttler\Scuttler3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="978548032"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuttler3" ID="{99A35500-0714-4919-8D6A-30570DED90E0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scuttler4" ID="{DD56028F-2D5C-4E6E-8A26-F1876C30BA93}" ShortID="495133654">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuttler4" ID="{55E0F385-CFE5-401B-AE65-63A8FAF97BF5}">
+									<Language>SFX</Language>
+									<AudioFile>Scuttler\Scuttler4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="467363008"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuttler4" ID="{55E0F385-CFE5-401B-AE65-63A8FAF97BF5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scuttler5" ID="{18CB17A0-65EB-4C33-AF9D-B10FE272DE8E}" ShortID="1040637954">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scuttler5" ID="{AD930466-A478-4338-AE1A-F719BEBF94E3}">
+									<Language>SFX</Language>
+									<AudioFile>Scuttler\Scuttler5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="292213833"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scuttler5" ID="{AD930466-A478-4338-AE1A-F719BEBF94E3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
