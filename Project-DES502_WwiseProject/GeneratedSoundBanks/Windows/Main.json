@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}",
     "Language": "SFX",
-    "Hash": "{84A3DC05-E400-2FB5-92EF-9FFE97DC237B}",
+    "Hash": "{87C2901C-70AC-5A5C-1186-AA48F6C0FE40}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -146,9 +146,10 @@
       "Name": "Play_WardenFootsteps",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_WardenFootsteps",
       "GUID": "{BF686C96-5DC3-4257-96CE-797A4D97B260}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0.26907387",
-      "DurationMax": "0.5216752",
+      "DurationMin": "0.33901188",
+      "DurationMax": "0.7816297",
       "MediaRefs": [
        {
         "Id": "82884822"
@@ -194,6 +195,6 @@
     ]
    }
   ],
-  "FileHash": "{3ACD0FF8-F564-1F70-DCDC-E1B3DB2017E1}"
+  "FileHash": "{826CFA07-464A-ABB9-97D9-56978DF00D0E}"
  }
 }

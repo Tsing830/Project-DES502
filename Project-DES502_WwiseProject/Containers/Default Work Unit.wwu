@@ -42,13 +42,16 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-400</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{A0BF12E2-AB9F-4047-9EF2-C4BBA499FC91}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
 											<Property Name="Max" Type="Real64" Value="50"/>
-											<Property Name="Min" Type="Real64" Value="-100"/>
+											<Property Name="Min" Type="Real64" Value="-400"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -56,11 +59,14 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>3</Value>
+								<Value>5</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="WardenFootstepAttenuation" ID="{8511A8EB-6F71-488C-84FC-195AAC652867}" WorkUnitID="{A1939A04-C1A8-479F-864A-D83B2BA41F99}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
 						</Reference>
