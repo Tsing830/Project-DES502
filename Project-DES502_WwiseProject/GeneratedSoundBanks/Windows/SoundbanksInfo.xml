@@ -23,7 +23,7 @@
 				<Bus Id="2246998526" Name="Main Audio Bus" ObjectPath="\Busses\Default Work Unit\Main Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}" Language="SFX" Hash="{87C2901C-70AC-5A5C-1186-AA48F6C0FE40}">
+		<SoundBank Id="3161908922" Type="User" GUID="{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}" Language="SFX" Hash="{DD17E442-F1A8-2A08-FC8C-3782ED57D9FF}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -111,5 +111,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{46DE9413-2FE1-8084-E433-BAB249B0D3F8}</FileHash>
+	<FileHash>{A047F720-74CC-E115-0105-216A07767D05}</FileHash>
 </SoundBanksInfo>
