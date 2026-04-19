@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyAnimationEvents : MonoBehaviour
 {
     private EnemyController enemyController;
+    [SerializeField] private AK.Wwise.Event footstepEvent;
 
     void Start()
     {
@@ -12,6 +13,9 @@ public class EnemyAnimationEvents : MonoBehaviour
 
     public void PlayFootstepSound()
     {
-        AkSoundEngine.PostEvent("Play_WardenFootsteps", gameObject);
+        if (footstepEvent != null && footstepEvent.IsValid())
+        {
+            footstepEvent.Post(gameObject);
+        }
     }
 }

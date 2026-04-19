@@ -18,7 +18,7 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [ "!UNITY_SERVER" ],
+    "defineConstraints": [ "!UNITY_SERVER", "UNITY_ADDRESSABLES", "AK_WWISE_ADDRESSABLES" ],
     "versionDefines": [
         {
             "name": "com.unity.addressables",

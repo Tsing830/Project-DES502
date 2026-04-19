@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3118934ab14228e49baef836b264c352, type: 3}
+  m_Name: BF686C96-5DC3-4257-96CE-797A4D97B260
+  m_EditorClassIdentifier: 
+  objectName: Play_WardenFootsteps
+  id: 956504242
+  guid: BF686C96-5DC3-4257-96CE-797A4D97B260
+  IsInUserDefinedSoundBank: 1

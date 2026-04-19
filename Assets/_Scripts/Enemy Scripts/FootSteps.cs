@@ -18,10 +18,24 @@ public class FootSteps : MonoBehaviour
         terrainDetector = new TerrainDetector();
     }
 
+    public void PlayFootstepSound()
+    {
+        if (audioSource == null)
+        {
+            return;
+        }
+
+        AudioClip clip = GetRandomClip();
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
+    // Keep backward compatibility with any old animation event name.
     private void Step()
     {
-        AudioClip clip = GetRandomClip();
-        audioSource.PlayOneShot(clip);
+        PlayFootstepSound();
     }
 
     private AudioClip GetRandomClip()
@@ -31,11 +45,14 @@ public class FootSteps : MonoBehaviour
         switch(terrainTextureIndex)
         {
             case 0:
+                if (stoneClips == null || stoneClips.Length == 0) return null;
                 return stoneClips[UnityEngine.Random.Range(0, stoneClips.Length)];
             case 1:
+                if (mudClips == null || mudClips.Length == 0) return null;
                 return mudClips[UnityEngine.Random.Range(0, mudClips.Length)];
             case 2:
             default:
+                if (grassClips == null || grassClips.Length == 0) return null;
                 return grassClips[UnityEngine.Random.Range(0, grassClips.Length)];
         }
         
