@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4454516572782684461}
   - component: {fileID: 2367839618308757091}
   - component: {fileID: 6339570501909426715}
+  - component: {fileID: 4251783561694326134}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -172,6 +173,18 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4251783561694326134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358705122876501368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe34b81794eb8a498bfb9088067cd6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8124186394878762748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231,6 +244,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4c20bbeecdf8e49a4d93adbdc43a14, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8054240058730997960}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4c20bbeecdf8e49a4d93adbdc43a14, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2821847535698130607}
   m_SourcePrefab: {fileID: 100100000, guid: 5a4c20bbeecdf8e49a4d93adbdc43a14, type: 3}
 --- !u!4 &8589579475605403927 stripped
 Transform:
@@ -264,3 +280,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2821847535698130607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8971031552570057645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6349052c7a7274ca27274ae70eec90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3d98846354e3944ca4ea2576fd8c423, type: 2}
