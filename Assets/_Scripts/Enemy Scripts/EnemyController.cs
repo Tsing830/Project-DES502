@@ -36,6 +36,13 @@ public class EnemyController : MonoBehaviour
     public float chaseSpeed = 6f;
     public float loseSightTime = 3f;
 
+    [Header("Permanent Chase Settings")]
+    public bool permanentChase = false;
+    public Transform teleportAnchor;
+    public float teleportDistanceThreshold = 30f;
+    public float teleportPathInvalidTime = 1.5f;
+    private float pathInvalidTimer = 0f;
+
     [Header("Attack Settings")]
     public float attackDistance = 2f;
     public float attackInterval = 1.5f;
@@ -231,11 +238,24 @@ public class EnemyController : MonoBehaviour
 
         if (loseSightTimer >= loseSightTime)
         {
-            agent.isStopped = false;
-            currentState = EnemyState.Patrol;
-            GoToNextPoint();
-            loseSightTimer = 0f;
-            return;
+            if (!permanentChase)
+            {
+                agent.isStopped = false;
+                currentState = EnemyState.Patrol;
+                GoToNextPoint();
+                loseSightTimer = 0f;
+                return;
+            }
+            else
+            {
+                // stay in chase; keep pursuing the player's current position
+                lastKnownPlayerPos = playerTransform.position;
+            }
+        }
+
+        if (permanentChase)
+        {
+            HandlePermanentChaseTeleport(distanceToPlayer);
         }
 
         if (distanceToPlayer <= attackDistance)
@@ -379,9 +399,76 @@ public class EnemyController : MonoBehaviour
 
     public void ResetState()
     {
+        if (permanentChase)
+        {
+            // Keep chasing even after checkpoint/reset. Teleport to anchor to avoid stranding.
+            if (teleportAnchor != null)
+            {
+                TeleportToAnchor();
+            }
+            currentState = EnemyState.Chase;
+            loseSightTimer = 0f;
+            return;
+        }
+
         transform.position = patrolPoints[0].position;
         currentState = EnemyState.Patrol;
         agent.ResetPath();
+    }
+
+    public void StartPermanentChase()
+    {
+        permanentChase = true;
+        StartChase();
+        Debug.Log($"{name}: Permanent chase engaged.");
+    }
+
+    private void HandlePermanentChaseTeleport(float distanceToPlayer)
+    {
+        if (playerTransform == null || teleportAnchor == null) return;
+
+        bool tooFar = distanceToPlayer > teleportDistanceThreshold;
+        bool pathBroken = agent.isOnNavMesh &&
+                          (agent.pathStatus == NavMeshPathStatus.PathInvalid ||
+                           agent.pathStatus == NavMeshPathStatus.PathPartial) &&
+                          !agent.pathPending;
+
+        if (tooFar || pathBroken)
+        {
+            pathInvalidTimer += Time.deltaTime;
+            if (pathInvalidTimer >= teleportPathInvalidTime)
+            {
+                TeleportToAnchor();
+                pathInvalidTimer = 0f;
+            }
+        }
+        else
+        {
+            pathInvalidTimer = 0f;
+        }
+    }
+
+    private void TeleportToAnchor()
+    {
+        if (teleportAnchor == null) return;
+
+        Vector3 target = teleportAnchor.position;
+        if (agent != null)
+        {
+            agent.ResetPath();
+            if (!agent.Warp(target))
+                transform.position = target;
+            if (playerTransform != null)
+            {
+                lastKnownPlayerPos = playerTransform.position;
+                agent.destination = lastKnownPlayerPos;
+            }
+        }
+        else
+        {
+            transform.position = target;
+        }
+        Debug.Log($"{name}: Teleported to anchor for permanent chase.");
     }
 
     public void TeleportAndSetPatrolRoute(Transform teleportTarget, Transform[] newPatrolPoints, bool startFromFirstPatrolPoint = true)
