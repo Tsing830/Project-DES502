@@ -28,6 +28,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_DoorOpen" ID="{607A38BF-A7A6-468B-9BB7-3D66391DB167}">
+					<ChildrenList>
+						<Action Name="" ID="{AE900704-EDFE-49FC-BEE5-5D358B08DDA5}" ShortID="700547985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="570757__snappeastudios__scifi-door-opening" ID="{544A7D17-D810-40BC-AF6B-C9BA04CC3E5B}" WorkUnitID="{3374D48D-61FA-42AF-8840-3CE6C895A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ItemPickup" ID="{1CE8A994-8235-4812-822F-77A720702E5D}">
+					<ChildrenList>
+						<Action Name="" ID="{8D52F389-CE81-4487-95B8-3CD893A69AED}" ShortID="844545811">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ItemPickup" ID="{41BE8753-0FE2-44DB-B677-D26B886F2BE9}" WorkUnitID="{3374D48D-61FA-42AF-8840-3CE6C895A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Buttons" ID="{F8D9F792-F2FD-4B35-AF22-F959159E2EF8}">
+					<ChildrenList>
+						<Action Name="" ID="{E9B85E15-438F-47E1-8091-7A13795C160C}" ShortID="312833190">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Buttons" ID="{7DE64552-50AD-4DB9-96BD-16398CE8A47C}" WorkUnitID="{3374D48D-61FA-42AF-8840-3CE6C895A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

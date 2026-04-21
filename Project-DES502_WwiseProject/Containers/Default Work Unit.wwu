@@ -550,94 +550,6 @@
 				</Sound>
 				<Folder Name="Buttons, Typing" ID="{B45B8830-F21A-4E81-A5B6-DC1C2D1A2246}" ShortID="506457295">
 					<ChildrenList>
-						<Sound Name="ButtonClick1" ID="{1AE32AFE-5B7F-428F-9746-149EFA5EBB5F}" ShortID="448601896">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="ButtonClick1" ID="{B9C1688B-FB5E-4849-BE0E-CC83113FC21D}">
-									<Language>SFX</Language>
-									<AudioFile>Buttons, Typing\ButtonClick1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1050000206"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="ButtonClick1" ID="{B9C1688B-FB5E-4849-BE0E-CC83113FC21D}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="ButtonClick2" ID="{B0572820-D189-46B4-84B0-7F0AFBCBFF2C}" ShortID="710951470">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="ButtonClick2" ID="{3A634E4A-9676-45DA-96D6-8C8A21DDF764}">
-									<Language>SFX</Language>
-									<AudioFile>Buttons, Typing\ButtonClick2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="461650631"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="ButtonClick2" ID="{3A634E4A-9676-45DA-96D6-8C8A21DDF764}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="ButtonClick3" ID="{BA3477BA-8608-4787-8A12-60EB4C5BCF95}" ShortID="126263159">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="ButtonClick3" ID="{BD3E8BB1-C1EC-491F-9145-A409FE8E5F3B}">
-									<Language>SFX</Language>
-									<AudioFile>Buttons, Typing\ButtonClick3.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="591672127"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="ButtonClick3" ID="{BD3E8BB1-C1EC-491F-9145-A409FE8E5F3B}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="ButtonClick4" ID="{99709DD3-F554-4A96-97EE-C8721D78691B}" ShortID="703648936">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="ButtonClick4" ID="{23454ED7-A50D-49A4-ABC9-9AE1218C017B}">
-									<Language>SFX</Language>
-									<AudioFile>Buttons, Typing\ButtonClick4.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="911864688"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="ButtonClick4" ID="{23454ED7-A50D-49A4-ABC9-9AE1218C017B}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Typing1" ID="{4D1555F5-93B6-464F-B937-9E3D0CB1DB12}" ShortID="906708022">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -682,6 +594,106 @@
 								<ActiveSource Name="Typing6" ID="{C55ACEA4-1F85-408B-86CF-618D581B5260}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Buttons" ID="{7DE64552-50AD-4DB9-96BD-16398CE8A47C}" ShortID="159809418">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ButtonClick3" ID="{BA3477BA-8608-4787-8A12-60EB4C5BCF95}" ShortID="126263159">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ButtonClick3" ID="{BD3E8BB1-C1EC-491F-9145-A409FE8E5F3B}">
+											<Language>SFX</Language>
+											<AudioFile>Buttons, Typing\ButtonClick3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="591672127"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ButtonClick3" ID="{BD3E8BB1-C1EC-491F-9145-A409FE8E5F3B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ButtonClick2" ID="{B0572820-D189-46B4-84B0-7F0AFBCBFF2C}" ShortID="710951470">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ButtonClick2" ID="{3A634E4A-9676-45DA-96D6-8C8A21DDF764}">
+											<Language>SFX</Language>
+											<AudioFile>Buttons, Typing\ButtonClick2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="461650631"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ButtonClick2" ID="{3A634E4A-9676-45DA-96D6-8C8A21DDF764}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ButtonClick1" ID="{1AE32AFE-5B7F-428F-9746-149EFA5EBB5F}" ShortID="448601896">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ButtonClick1" ID="{B9C1688B-FB5E-4849-BE0E-CC83113FC21D}">
+											<Language>SFX</Language>
+											<AudioFile>Buttons, Typing\ButtonClick1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1050000206"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ButtonClick1" ID="{B9C1688B-FB5E-4849-BE0E-CC83113FC21D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ButtonClick4" ID="{99709DD3-F554-4A96-97EE-C8721D78691B}" ShortID="703648936">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ButtonClick4" ID="{23454ED7-A50D-49A4-ABC9-9AE1218C017B}">
+											<Language>SFX</Language>
+											<AudioFile>Buttons, Typing\ButtonClick4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="911864688"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ButtonClick4" ID="{23454ED7-A50D-49A4-ABC9-9AE1218C017B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<RandomSequenceContainer Name="WardenAttack" ID="{62AF397A-D7A2-45F2-A377-D46A4B7C82EA}" ShortID="916685339">
@@ -1002,6 +1014,514 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="PlayerFootsteps" ID="{D7903D01-5793-4FB7-9255-601C2F9A0738}" ShortID="1067070760">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>54</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>440</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{579C774B-DE19-4050-9211-07D45676ABCA}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-400"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="WardenFootstepAttenuation" ID="{8511A8EB-6F71-488C-84FC-195AAC652867}" WorkUnitID="{A1939A04-C1A8-479F-864A-D83B2BA41F99}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="WFootstep1" ID="{6B77F4D2-2B57-46C9-8B36-7255D81B7632}" ShortID="220291034">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep1" ID="{6E6A394B-96C8-4381-ABAC-BAC805319AD7}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="934357879"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep1" ID="{6E6A394B-96C8-4381-ABAC-BAC805319AD7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep10" ID="{FF819573-3819-42C5-AFB0-420F831D9FDF}" ShortID="1034815202">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep10" ID="{301FF2A1-7EBF-4DAA-80B0-603F35D44DC1}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep10.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="283700716"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep10" ID="{301FF2A1-7EBF-4DAA-80B0-603F35D44DC1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep11" ID="{65B1264E-C5F2-42D6-81AF-0A971796DB64}" ShortID="854333093">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep11" ID="{C7D7EDE3-567C-4105-982E-CBD022D2E8C3}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep11.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="128340803"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep11" ID="{C7D7EDE3-567C-4105-982E-CBD022D2E8C3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep12" ID="{7FC6EA65-CC9C-4E91-AFD8-BB3A8506EE18}" ShortID="76670084">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep12" ID="{3F7D6C19-E11B-4D36-8A69-95FF7A20E38B}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep12.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="533204647"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep12" ID="{3F7D6C19-E11B-4D36-8A69-95FF7A20E38B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep13" ID="{23D5D8F8-48DD-499A-99BD-10D3970E1EC5}" ShortID="94655464">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep13" ID="{119B017B-3A6F-400A-8D7F-3895CA6E3A02}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep13.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="360019234"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep13" ID="{119B017B-3A6F-400A-8D7F-3895CA6E3A02}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep2" ID="{A9053747-5F29-4509-9B9D-745AB8266CB0}" ShortID="164978727">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep2" ID="{D50520BD-446A-4AF7-8E6E-2F289B0E982E}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="268458190"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep2" ID="{D50520BD-446A-4AF7-8E6E-2F289B0E982E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep3" ID="{A0540406-51F7-403D-B661-FA26F13E1B75}" ShortID="317394597">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep3" ID="{613853CC-991E-4F7A-B48B-26C80D51D15C}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="696196245"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep3" ID="{613853CC-991E-4F7A-B48B-26C80D51D15C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep4" ID="{DA16387F-3051-436F-8084-E4E031AF8833}" ShortID="917084354">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep4" ID="{45E576AB-7F94-413B-9EBD-FBFCED1D6220}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="82884822"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep4" ID="{45E576AB-7F94-413B-9EBD-FBFCED1D6220}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep5" ID="{20B378B2-1538-44B2-984C-5753CE6631F3}" ShortID="278399497">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep5" ID="{4E169FFA-E60E-4C87-939C-1E34A3526928}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="631612279"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep5" ID="{4E169FFA-E60E-4C87-939C-1E34A3526928}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep6" ID="{EB795200-47D2-4920-A933-1FF089F34FEB}" ShortID="678696317">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep6" ID="{48EE7625-7464-4EF7-A798-3CD6C39D8BB1}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="446830826"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep6" ID="{48EE7625-7464-4EF7-A798-3CD6C39D8BB1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep7" ID="{0A8DCC97-CE2D-4B49-BFBE-A1C7FD4781E0}" ShortID="924476307">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep7" ID="{3D6865DA-2CCF-4603-84CA-26010613BCE2}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep7.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="633901146"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep7" ID="{3D6865DA-2CCF-4603-84CA-26010613BCE2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep8" ID="{BFD1650B-AA76-4433-B094-F4240EC8583D}" ShortID="35140163">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep8" ID="{56442703-83D0-4D0E-BAD7-A5C93275548A}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep8.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="289668659"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep8" ID="{56442703-83D0-4D0E-BAD7-A5C93275548A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WFootstep9" ID="{0D5F951F-EFFB-4D73-B821-F756C040E3C6}" ShortID="478058531">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WFootstep9" ID="{D77E5DCD-DDB4-463E-9E7E-CD49A0330F69}">
+									<Language>SFX</Language>
+									<AudioFile>WardenFootsteps\WFootstep9.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="815128207"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WFootstep9" ID="{D77E5DCD-DDB4-463E-9E7E-CD49A0330F69}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="570757__snappeastudios__scifi-door-opening" ID="{544A7D17-D810-40BC-AF6B-C9BA04CC3E5B}" ShortID="241649624">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{25C8D097-E546-47C3-B824-76E3B2F4043D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5E3BF40F-74A5-4B88-8A09-6AE726CDEE91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="570757__snappeastudios__scifi-door-opening" ID="{F16C541B-8E5A-4B05-97C2-5D8C41E208A8}">
+							<Language>SFX</Language>
+							<AudioFile>570757__snappeastudios__scifi-door-opening.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="92847021"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="570757__snappeastudios__scifi-door-opening" ID="{F16C541B-8E5A-4B05-97C2-5D8C41E208A8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

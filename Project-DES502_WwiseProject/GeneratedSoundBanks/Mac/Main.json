@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}",
     "Language": "SFX",
-    "Hash": "{DD17E442-F1A8-2A08-FC8C-3782ED57D9FF}",
+    "Hash": "{1519B3E4-9258-A3AC-9117-D21F21C2B1CE}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -22,6 +22,14 @@
       "Location": "Memory",
       "ShortName": "WardenFootsteps\\WFootstep4.wav",
       "CachePath": "54/{5466A2E2-C7F6-E7ED-C30C-4EE14CF63FDF}.wem"
+     },
+     {
+      "Id": "92847021",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "570757__snappeastudios__scifi-door-opening.wav",
+      "CachePath": "0B/{0B704661-52CB-EC19-E577-17A704EB4D0B}.wem"
      },
      {
       "Id": "128340803",
@@ -80,12 +88,28 @@
       "CachePath": "0E/{0E5A093E-D0FE-4043-4018-CA83D91973A8}.wem"
      },
      {
+      "Id": "461650631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Buttons, Typing\\ButtonClick2.wav",
+      "CachePath": "DF/{DFD99A02-12A0-B42D-A29A-BE39BF65E4D1}.wem"
+     },
+     {
       "Id": "533204647",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "WardenFootsteps\\WFootstep12.wav",
       "CachePath": "05/{0583CFF0-A8B4-FEC0-CBA8-E47A5CE9CE42}.wem"
+     },
+     {
+      "Id": "591672127",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Buttons, Typing\\ButtonClick3.wav",
+      "CachePath": "FA/{FAF28C17-08E9-BF49-D933-3C7C289ACD43}.wem"
      },
      {
       "Id": "631612279",
@@ -120,12 +144,28 @@
       "CachePath": "50/{50B9371F-4241-F33F-D380-55271BECB447}.wem"
      },
      {
+      "Id": "911864688",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Buttons, Typing\\ButtonClick4.wav",
+      "CachePath": "3E/{3E134A63-AC47-5A1A-B48A-87D9A02AB284}.wem"
+     },
+     {
       "Id": "934357879",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "WardenFootsteps\\WFootstep1.wav",
       "CachePath": "0B/{0B9F9A1A-5DB4-2695-461C-82E8E8D4F060}.wem"
+     },
+     {
+      "Id": "1050000206",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Buttons, Typing\\ButtonClick1.wav",
+      "CachePath": "FD/{FDAC7833-61F2-C5DE-73B8-472B4FEACCC1}.wem"
      }
     ],
     "Events": [
@@ -138,6 +178,43 @@
       "MediaRefs": [
        {
         "Id": "287231370"
+       }
+      ]
+     },
+     {
+      "Id": "2461875365",
+      "Name": "Play_Buttons",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Buttons",
+      "GUID": "{F8D9F792-F2FD-4B35-AF22-F959159E2EF8}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.27864584",
+      "DurationMax": "0.45279166",
+      "MediaRefs": [
+       {
+        "Id": "461650631"
+       },
+       {
+        "Id": "591672127"
+       },
+       {
+        "Id": "911864688"
+       },
+       {
+        "Id": "1050000206"
+       }
+      ]
+     },
+     {
+      "Id": "3197300806",
+      "Name": "Play_DoorOpen",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_DoorOpen",
+      "GUID": "{607A38BF-A7A6-468B-9BB7-3D66391DB167}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4680952",
+      "DurationMax": "1.4680952",
+      "MediaRefs": [
+       {
+        "Id": "92847021"
        }
       ]
      },
@@ -195,6 +272,6 @@
     ]
    }
   ],
-  "FileHash": "{899286B2-A3C1-A59B-2F53-B894DAEA7CB2}"
+  "FileHash": "{A11C348B-F180-E21C-C2AD-34C86FACD1AE}"
  }
 }

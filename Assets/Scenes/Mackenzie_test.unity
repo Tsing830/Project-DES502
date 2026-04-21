@@ -22829,6 +22829,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98903e440bb2ccd46b8998356dac2f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+--- !u!114 &1290774775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290774758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a601e2e687e1340a99435a03bbe1a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 141d7b4d52e4146469d3d382ca5d2096, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &1300356083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31103,6 +31128,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1358705122876501368, guid: 4c7f5a83e0b7f6643a996a689e7aae56, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1290774766}
+    - targetCorrespondingSourceObject: {fileID: 1358705122876501368, guid: 4c7f5a83e0b7f6643a996a689e7aae56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1290774775}
   m_SourcePrefab: {fileID: 100100000, guid: 4c7f5a83e0b7f6643a996a689e7aae56, type: 3}
 --- !u!1001 &1875829251
 PrefabInstance:

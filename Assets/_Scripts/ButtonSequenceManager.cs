@@ -29,6 +29,9 @@ public class ButtonSequenceManager : MonoBehaviour
 
     public void ButtonPressed(DoorButton button)
     {
+
+        AkUnitySoundEngine.PostEvent("Play_Buttons", gameObject); // Plays Buttons sound - Charlotte
+
         if (sequence == null || sequence.Length == 0)
         {
             Debug.LogWarning($"{name}: Button sequence is not configured.");

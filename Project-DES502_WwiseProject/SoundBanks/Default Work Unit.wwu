@@ -6,7 +6,9 @@
 				<SoundBank Name="Main" ID="{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_WardenFootsteps" ID="{BF686C96-5DC3-4257-96CE-797A4D97B260}" WorkUnitID="{B02CFA08-1C68-4316-AFB1-51262A264127}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DoorOpen" ID="{607A38BF-A7A6-468B-9BB7-3D66391DB167}" WorkUnitID="{B02CFA08-1C68-4316-AFB1-51262A264127}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience1" ID="{A6EFCFFC-BA02-47FA-A340-8A684E133F22}" WorkUnitID="{B02CFA08-1C68-4316-AFB1-51262A264127}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Buttons" ID="{F8D9F792-F2FD-4B35-AF22-F959159E2EF8}" WorkUnitID="{B02CFA08-1C68-4316-AFB1-51262A264127}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

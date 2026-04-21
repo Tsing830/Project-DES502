@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="172">
 	<SoundBanks>
-		<SoundBank Id="3161908922" Type="User" GUID="{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}" Language="SFX" Hash="{DD17E442-F1A8-2A08-FC8C-3782ED57D9FF}">
+		<SoundBank Id="3161908922" Type="User" GUID="{57100668-9EDC-4B01-A78C-BBE4EBE3A0CF}" Language="SFX" Hash="{1519B3E4-9258-A3AC-9117-D21F21C2B1CE}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -9,6 +9,10 @@
 				<File Id="82884822" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WardenFootsteps\WFootstep4.wav</ShortName>
 					<CachePath>54/{5466A2E2-C7F6-E7ED-C30C-4EE14CF63FDF}.wem</CachePath>
+				</File>
+				<File Id="92847021" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>570757__snappeastudios__scifi-door-opening.wav</ShortName>
+					<CachePath>0B/{0B704661-52CB-EC19-E577-17A704EB4D0B}.wem</CachePath>
 				</File>
 				<File Id="128340803" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WardenFootsteps\WFootstep11.wav</ShortName>
@@ -38,9 +42,17 @@
 					<ShortName>WardenFootsteps\WFootstep6.wav</ShortName>
 					<CachePath>0E/{0E5A093E-D0FE-4043-4018-CA83D91973A8}.wem</CachePath>
 				</File>
+				<File Id="461650631" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Buttons, Typing\ButtonClick2.wav</ShortName>
+					<CachePath>DF/{DFD99A02-12A0-B42D-A29A-BE39BF65E4D1}.wem</CachePath>
+				</File>
 				<File Id="533204647" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WardenFootsteps\WFootstep12.wav</ShortName>
 					<CachePath>05/{0583CFF0-A8B4-FEC0-CBA8-E47A5CE9CE42}.wem</CachePath>
+				</File>
+				<File Id="591672127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Buttons, Typing\ButtonClick3.wav</ShortName>
+					<CachePath>FA/{FAF28C17-08E9-BF49-D933-3C7C289ACD43}.wem</CachePath>
 				</File>
 				<File Id="631612279" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WardenFootsteps\WFootstep5.wav</ShortName>
@@ -58,15 +70,36 @@
 					<ShortName>WardenFootsteps\WFootstep9.wav</ShortName>
 					<CachePath>50/{50B9371F-4241-F33F-D380-55271BECB447}.wem</CachePath>
 				</File>
+				<File Id="911864688" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Buttons, Typing\ButtonClick4.wav</ShortName>
+					<CachePath>3E/{3E134A63-AC47-5A1A-B48A-87D9A02AB284}.wem</CachePath>
+				</File>
 				<File Id="934357879" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WardenFootsteps\WFootstep1.wav</ShortName>
 					<CachePath>0B/{0B9F9A1A-5DB4-2695-461C-82E8E8D4F060}.wem</CachePath>
+				</File>
+				<File Id="1050000206" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Buttons, Typing\ButtonClick1.wav</ShortName>
+					<CachePath>FD/{FDAC7833-61F2-C5DE-73B8-472B4FEACCC1}.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
 				<Event Id="1117071627" Name="Play_Ambience1" ObjectPath="\Events\Default Work Unit\Play_Ambience1" GUID="{A6EFCFFC-BA02-47FA-A340-8A684E133F22}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="287231370"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2461875365" Name="Play_Buttons" ObjectPath="\Events\Default Work Unit\Play_Buttons" GUID="{F8D9F792-F2FD-4B35-AF22-F959159E2EF8}" DurationType="OneShot" DurationMin="0.27864584" DurationMax="0.45279166">
+					<MediaRefs>
+						<MediaRef Id="461650631"/>
+						<MediaRef Id="591672127"/>
+						<MediaRef Id="911864688"/>
+						<MediaRef Id="1050000206"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3197300806" Name="Play_DoorOpen" ObjectPath="\Events\Default Work Unit\Play_DoorOpen" GUID="{607A38BF-A7A6-468B-9BB7-3D66391DB167}" DurationType="OneShot" DurationMin="1.4680952" DurationMax="1.4680952">
+					<MediaRefs>
+						<MediaRef Id="92847021"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="956504242" Name="Play_WardenFootsteps" ObjectPath="\Events\Default Work Unit\Play_WardenFootsteps" GUID="{BF686C96-5DC3-4257-96CE-797A4D97B260}" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.33901188" DurationMax="0.7816297">
@@ -89,5 +122,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2727690C-9A56-2944-FA80-669AF0FBDA45}</FileHash>
+	<FileHash>{64D600DA-A506-11E4-C2EA-7F5D815C8C40}</FileHash>
 </SoundBanksInfo>

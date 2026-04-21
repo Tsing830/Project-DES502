@@ -57,10 +57,10 @@ public class DoorLock : MonoBehaviour, IInteractable
 
        public void OpenDoor()
         {
+            if (isOpening) return;  // Stops DoorOpen sound from playing repeatedly - Charlotte
             Debug.Log("Door opened!");
-
+            AkUnitySoundEngine.PostEvent("Play_DoorOpen", gameObject); // Plays DoorOpen sound - Charlotte
             isOpening = true;
-
 
         }
     
