@@ -2,25 +2,34 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [Header("Panels")]
-    public GameObject[] panels;
+    [Header("Canvases")]
+    public Canvas[] canvases;
 
-    void Start()
+    [Header("Navigation")]
+    public Canvas backArrow;
+
+    [Header("Default Canvas")]
+    public Canvas mainMenuCanvas;
+
+    private void Start()
     {
-        HideAllPanels();
+        HideAllCanvases();
+        if (mainMenuCanvas != null) mainMenuCanvas.enabled = true;
     }
 
-    public void ShowPanel(GameObject panel)
+    public void ShowCanvas(Canvas canvas)
     {
-        HideAllPanels();
-        panel.SetActive(true);
+        HideAllCanvases();
+        canvas.enabled = true;
+        if (backArrow != null) backArrow.enabled = true;
     }
 
-    public void HideAllPanels()
+    public void HideAllCanvases()
     {
-        foreach (GameObject panel in panels)
+        foreach (Canvas canvas in canvases)
         {
-            panel.SetActive(false);
+            canvas.enabled = false;
         }
+        if (backArrow != null) backArrow.enabled = false;
     }
 }

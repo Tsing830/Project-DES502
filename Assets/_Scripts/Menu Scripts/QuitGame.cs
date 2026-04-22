@@ -23,6 +23,7 @@ public class QuitGame : MonoBehaviour
     public void exitGame()
     {
         Application.Quit();
+        Debug.Log("Quit Pressed");
     }
 
 }
