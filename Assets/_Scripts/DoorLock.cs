@@ -8,6 +8,7 @@ public class DoorLock : MonoBehaviour, IInteractable
     public bool isLocked = true; // Whether the door is currently locked
     public Vector3 openOffset = new Vector3(0, 0, 3f); // how far the door moves
     public float openSpeed = 3f;
+    public Animator animator;
 
     [Header("Warden Trigger (e.g. Server Room Door)")]
     [Tooltip("If set, unlocking this door with a key permanently locks the Warden into chase mode.")]
@@ -36,7 +37,8 @@ public class DoorLock : MonoBehaviour, IInteractable
     {
         if (isOpening)
         {
-            transform.position = Vector3.Lerp(transform.position, openPos, Time.deltaTime * openSpeed);
+            animator.Play("DoorOpen");
+            //transform.position = Vector3.Lerp(transform.position, openPos, Time.deltaTime * openSpeed);
         }
     }
 
