@@ -71,7 +71,6 @@ public class DoorLock : MonoBehaviour, IInteractable
             Debug.Log("Door opened!");
             AkUnitySoundEngine.PostEvent("Play_DoorOpen", gameObject); // Plays DoorOpen sound - Charlotte
             isOpening = true;
-
         }
     
 

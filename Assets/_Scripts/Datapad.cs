@@ -23,7 +23,7 @@ public class Datapad : MonoBehaviour, IInteractable
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (textComponent.text == lines[index])
             {
