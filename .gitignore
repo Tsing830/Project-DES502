@@ -23,3 +23,5 @@
 Thumbs.db
 *.meta
 !*.*.meta
+.claude/
+.dotnet-home/
